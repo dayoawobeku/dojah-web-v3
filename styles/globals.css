@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  font-family: 'Atakk', sans-serif;
+  scroll-behavior: smooth;
+}
+
+::-webkit-search-cancel-button {
+  display: none;
+}
+
+@layer base {
+  @font-face {
+    font-family: 'Atakk';
+    src: url('../assets/fonts/Atakk-Regular.woff2') format('woff2'),
+      url('../assets/fonts/Atakk-Regular.woff') format('woff'),
+      url('../assets/fonts/Atakk-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Atakk';
+    src: url('../assets/fonts/Atakk-Medium.woff2') format('woff2'),
+      url('../assets/fonts/Atakk-Medium.woff') format('woff'),
+      url('../assets/fonts/Atakk-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Atakk';
+    src: url('../assets/fonts/Atakk-Semibold.woff2') format('woff2'),
+      url('../assets/fonts/Atakk-Semibold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Atakk';
+    src: url('../assets/fonts/Atakk-Bold.woff2') format('woff2'),
+      url('../assets/fonts/Atakk-Bold.woff') format('woff'),
+      url('../assets/fonts/Atakk-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+}
+
+@layer components {
+  /* nav items */
+  .products-dropdown-menu,
+  .developers-dropdown-menu,
+  .company-dropdown-menu,
+  .use-cases-dropdown-menu {
+    display: none;
+  }
+
+  .developers:hover .developers-dropdown-menu,
+  .company:hover .company-dropdown-menu,
+  .use-cases:hover .use-cases-dropdown-menu,
+  .products:hover .products-dropdown-menu {
+    display: block;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .products:hover::after,
+  .developers:hover::after,
+  .company:hover::after,
+  .use-cases:hover::after {
+    content: '';
+    position: absolute;
+    width: 65px;
+    height: 5px;
+    background-color: #3f7cdb;
+    bottom: -6px;
+    z-index: 1550;
+    transition: all 0.3s ease-in-out;
+  }
+
+  /* nav lis hover */
+  .nav-li:hover p {
+    color: #0b1c56;
+  }
+
+  .nav-li:hover svg path:nth-child(1) {
+    fill: #d9e5f8;
+    opacity: 1;
+  }
+
+  .nav-li:hover svg path:nth-child(2),
+  .nav-li:hover svg path:nth-child(3),
+  .nav-li:hover svg path:nth-child(4),
+  .nav-li:hover svg path:nth-child(5) {
+    fill: #3f7cdb;
+  }
+
+  .nav-li:hover .access-bank-accounts path:nth-child(2) {
+    stroke: #3f7cdb;
+  }
+
+  .nav-li .arrow {
+    margin-bottom: -2px;
+  }
+
+  .nav-li:hover .arrow path {
+    fill: #0b1c56 !important;
+  }
+
+  input[type='search'] {
+    @apply pl-12 pr-4;
+  }
+
+  input[type='search']::placeholder {
+    @apply text-black-200;
+  }
+}

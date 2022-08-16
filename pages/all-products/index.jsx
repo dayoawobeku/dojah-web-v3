@@ -1,0 +1,176 @@
+import Head from 'next/head';
+import ProductsLayout from '../../components/AllProducts/ProductsLayout';
+import {
+  accessBankAccountsVerificationProduct,
+  addressVerificationProduct,
+  amlCheckProduct,
+  bankAccountVerificationProduct,
+  biometricVerificationProduct,
+  documentVerificationProduct,
+  easyConnectProduct,
+  easyLookupProduct,
+  easyOnboardProduct,
+  emailCheckProduct,
+  financialDataWidgetProduct,
+  finTransactionAnalysisProduct,
+  governmentVerificationProduct,
+  idVerificationProduct,
+  ipDeviceCheckProduct,
+  linkBankAccountsVerificationProduct,
+  livenessCheckProduct,
+  phoneNumberCheckProduct,
+} from '../../assets/images/images';
+import {useCallback, useEffect, useState} from 'react';
+
+const ALL_PRODUCTS = [
+  {
+    src: governmentVerificationProduct,
+    largeText: 'Government ID Verification',
+    smallText: 'KYC check and verification',
+    link: '/all-products/government-id-verification',
+  },
+  {
+    src: documentVerificationProduct,
+    largeText: 'Document Verification',
+    smallText: 'Extract and verify document data',
+    link: '/all-products/document-verification',
+  },
+  {
+    src: biometricVerificationProduct,
+    largeText: 'Biometric Verification',
+    smallText: 'Authenticate users with facial biometrics',
+    link: '/all-products/biometric-verification',
+  },
+  {
+    src: addressVerificationProduct,
+    largeText: 'Address Verification',
+    smallText: 'Capture and validate physical location',
+    link: '/all-products/address-verification',
+  },
+  {
+    src: bankAccountVerificationProduct,
+    largeText: 'Bank Account Verification',
+    smallText: 'Look up and verify users with NUBAN',
+    link: '/all-products/bank-account-verification',
+  },
+  {
+    src: linkBankAccountsVerificationProduct,
+    largeText: 'Link Bank Accounts',
+    smallText: 'Retrieve account transaction details',
+    link: '/all-products/government-id-verification',
+  },
+  {
+    src: accessBankAccountsVerificationProduct,
+    largeText: 'Access Bank Accounts',
+    smallText: 'Retrieve account transaction details',
+    link: '/all-products/government-id-verification',
+  },
+  {
+    src: finTransactionAnalysisProduct,
+    largeText: 'Fin. Transaction Analysis',
+    smallText: 'Analyse spending patterns and transactions',
+    link: '/all-products/government-id-verification',
+  },
+  {
+    src: ipDeviceCheckProduct,
+    largeText: 'IP and Device Check',
+    smallText: 'Look up and verify users with NUBAN',
+    link: '/all-products/ip-device-check',
+  },
+  {
+    src: emailCheckProduct,
+    largeText: 'Email Check',
+    smallText: 'Look up and verify users with NUBAN',
+    link: '/all-products/email-check',
+  },
+  {
+    src: phoneNumberCheckProduct,
+    largeText: 'Phone Number Check',
+    smallText: 'Look up and verify users with NUBAN',
+    link: '/all-products/phone-number-check',
+  },
+  {
+    src: livenessCheckProduct,
+    largeText: 'Liveness Check',
+    smallText: 'Look up and verify users with NUBAN',
+    link: '/all-products/liveness-check',
+  },
+  {
+    src: amlCheckProduct,
+    largeText: 'Anti-Money Laundering Check',
+    smallText: 'Look up and verify users with NUBAN',
+    link: '/all-products/government-id-verification',
+  },
+  {
+    src: financialDataWidgetProduct,
+    largeText: 'Financial Data Widget',
+    smallText: 'Look up and verify users with NUBAN',
+    link: '/all-products/government-id-verification',
+  },
+  {
+    src: idVerificationProduct,
+    largeText: 'ID Verification Widget',
+    smallText: 'Look up and verify users with NUBAN',
+    link: '/all-products/government-id-verification',
+  },
+  {
+    src: easyLookupProduct,
+    largeText: 'Easy Lookup',
+    smallText: 'Look up and verify users with NUBAN',
+    link: '/all-products/easy-lookup',
+  },
+  {
+    src: easyConnectProduct,
+    largeText: 'Easy Connect',
+    smallText: 'Look up and verify users with NUBAN',
+    link: '/all-products/easy-connect',
+  },
+  {
+    src: easyOnboardProduct,
+    largeText: 'Easy Onboard',
+    smallText: 'Look up and verify users with NUBAN',
+    link: '/all-products/easy-onboard',
+  },
+];
+
+export default function AllProducts() {
+  const [selectedProducts, setSelectedProducts] = useState('');
+
+  const [filteredProducts, setFilteredProducts] = useState(ALL_PRODUCTS);
+
+  const filterByProducts = useCallback(
+    filteredData => {
+      if (selectedProducts === '') {
+        return filteredData;
+      }
+
+      const filteredItems = filteredData.filter(
+        r =>
+          r.largeText.toLowerCase().indexOf(selectedProducts.toLowerCase()) !==
+          -1,
+      );
+
+      return filteredItems;
+    },
+    [selectedProducts],
+  );
+
+  useEffect(() => {
+    const filteredData = filterByProducts(ALL_PRODUCTS);
+    setFilteredProducts(filteredData);
+  }, [filterByProducts]);
+
+  return (
+    <div>
+      <Head>
+        <title>Dojah web v3 - All Products</title>
+        <meta name="description" content="Generated by create next app" />
+      </Head>
+      <ProductsLayout
+        selectedProducts={selectedProducts}
+        setSelectedProducts={setSelectedProducts}
+        ALL_PRODUCTS={filteredProducts}
+      />
+    </div>
+  );
+}
