@@ -1,4 +1,4 @@
-import Image from 'next/image';
+simport Image from 'next/image';
 import {
   moneymieLogo,
   pricingCarouselDots,
@@ -11,7 +11,7 @@ export default function CustomerStories() {
       <div className="bg-secondary rounded-2xl bg-none sm:bg-[url('../assets/images/pricing-customer-stories-art.svg')] bg-no-repeat bg-cover">
         <div className="flex py-10 md:py-18 px-5 sm:px-4 flex-col items-center justify-center max-w-[651px] mx-auto">
           <Image
-            alt="moneymie logo"
+            alt="moneymie logso"
             src={moneymieLogo}
             width={130}
             height={26}
