@@ -10,13 +10,17 @@ export default function Hero() {
       id="maincontent"
       tabIndex={-1}
     >
-      <div className="flex items-center md:justify-between justify-center flex-wrap md:flex-nowrap gap-18 md:gap-6 max-w-[1195px] mx-auto px-4 py-28">
-        <div className="lg:max-w-[557px] md:w-3/5">
+      <div className="flex items-center lg:justify-between justify-center flex-wrap lg:flex-nowrap gap-18 md:gap-6 max-w-[1195px] mx-auto px-4 py-16 md:py-28">
+        <div className="lg:max-w-[557px] lg:w-3/5">
           <h1 className="text-xl font-bold md:text-2xl text-primary-200 transition-all">
             End-to-end identity verification for {''}
-            <span className="text-white">onboarding</span>
+            <div className="text down w-full relative overflow-hidden h-14 md:h-18">
+              <p className="text-white">onboarding</p>
+              <p className="text-white">compliance</p>
+              <p className="text-white">fraud check</p>
+            </div>
           </h1>
-          <p className="text-base text-secondary-100">
+          <p className="text-base text-secondary-100 mt-6">
             Startups, scale-ups and all types of digital businesses use Dojah’s
             APIs to verify, onboard and manage user identity across Africa.
           </p>

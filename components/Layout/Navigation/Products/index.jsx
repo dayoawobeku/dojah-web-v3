@@ -3,10 +3,6 @@ import GovernmentIdVerification from './GovernmentIdVerification';
 import DocumentVerification from './DocumentVerification';
 import BiometricVerification from './BiometricVerification';
 import AddressVerification from './AddressVerification';
-import BankAccountVerification from './BankAccountVerification';
-import LinkBankAccounts from './LinkBankAccounts';
-import AccessBankAccounts from './AccessBankAccounts';
-import FinancialTransaction from './FinancialTransaction';
 import IpDeviceCheck from './IpDeviceCheck';
 import EmailCheck from './EmailCheck';
 import PhoneNumberCheck from './PhoneNumberCheck';
@@ -44,31 +40,10 @@ const PRODUCTS = [
     smallText: 'Capture and validate physical location',
   },
   {
-    href: '/all-products/bank-account-verification',
-    text: 'Bank Account Verification',
-    icon: <BankAccountVerification />,
-    smallText: 'Look up and verify users with NUBAN',
-  },
-];
-
-const PRODUCTS2 = [
-  {
-    href: '/all-products/',
-    text: 'Link Bank Accounts',
-    icon: <LinkBankAccounts />,
-    smallText: 'Retrieve account transaction details',
-  },
-  {
-    href: '/all-products/',
-    text: 'Access Bank Accounts',
-    icon: <AccessBankAccounts />,
-    smallText: 'Retrieve account transaction details',
-  },
-  {
-    href: '/all-products/',
-    text: 'Financial Transaction Analysis',
-    icon: <FinancialTransaction />,
-    smallText: 'Analyse spending patterns and transactions',
+    href: '/all-products/financial-connection',
+    text: 'Financial Connection',
+    icon: <EmailCheck />,
+    smallText: 'Access and vefify financial data',
   },
 ];
 
@@ -141,12 +116,20 @@ const PRODUCTS5 = [
   },
 ];
 
-export default function Products() {
+export default function Products({dropdown = false}) {
   return (
-    <div className="absolute left-0 z-10 w-full p-20 bg-white cursor-default top-full products-dropdown-menu">
-      <div className="max-w-[1195px] mx-auto px-4 grid grid-cols-4 place-items-start items-start gap-x-10 gap-y-6 whitespace-nowrap">
+    <div
+      className={`w-full bg-white cursor-default top-full ${
+        dropdown ? 'products-dropdown-menu absolute left-0 z-10 p-20' : ''
+      }`}
+    >
+      <div
+        className={`max-w-[1195px] mx-auto ${
+          dropdown ? 'px-4 grid-cols-3' : 'grid-cols-1'
+        } grid place-items-start items-start gap-x-10 gap-y-6 whitespace-nowrap`}
+      >
         <div>
-          <p className="text-xs font-medium uppercase text-start text-secondary-200">
+          <p className="text-xs font-medium uppercase text-start text-secondary-150">
             IDENTITY VERIFICATION
           </p>
           <div className="flex flex-col gap-6 mt-6">
@@ -162,25 +145,8 @@ export default function Products() {
             ))}
           </div>
         </div>
-        <div>
-          <p className="text-xs font-medium uppercase text-start text-secondary-200">
-            FINANCIAL SERVICES
-          </p>
-          <div className="flex flex-col gap-6 mt-6">
-            {PRODUCTS2.map(({href, externalUrl, text, smallText, icon}) => (
-              <NavItem
-                key={text}
-                icon={icon}
-                text={text}
-                href={href}
-                smallText={smallText}
-                externalUrl={externalUrl}
-              />
-            ))}
-          </div>
-        </div>
         <div className="self-start">
-          <p className="text-xs font-medium uppercase text-start text-secondary-200">
+          <p className="text-xs font-medium uppercase text-start text-secondary-150">
             AUTHENTICATION & CHECKS
           </p>
           <div className="flex flex-col gap-6 mt-6">
@@ -198,7 +164,7 @@ export default function Products() {
         </div>
         <div className="flex flex-col gap-6">
           <div className="self-start">
-            <p className="text-xs font-medium uppercase text-start text-secondary-200">
+            <p className="text-xs font-medium uppercase text-start text-secondary-150">
               WIDGETS
             </p>
             <div className="flex flex-col gap-6 mt-6">
@@ -215,7 +181,7 @@ export default function Products() {
             </div>
           </div>
           <div className="self-start">
-            <p className="text-xs font-medium uppercase text-start text-secondary-200">
+            <p className="text-xs font-medium uppercase text-start text-secondary-150">
               NO-CODE TOOLS
             </p>
             <div className="flex flex-col gap-6 mt-6">

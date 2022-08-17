@@ -4,7 +4,6 @@ import Logistics from './Logistics';
 import RetailEcommerce from './RetailEcommerce';
 import FraudDetection from './FraudDetection';
 import BusinessVerification from './BusinessVerification';
-import Authentication from './Authentication';
 import Geolocation from './Geolocation';
 import OnboardingVerification from './OnboardingVerification';
 
@@ -42,12 +41,6 @@ const USE_CASES2 = [
     icon: <BusinessVerification />,
     smallText: 'Protect your business interactions, verify',
   },
-  {
-    href: '/',
-    text: 'Authentication',
-    icon: <Authentication />,
-    smallText: 'Prove user information in real-time',
-  },
 ];
 
 const USE_CASES3 = [
@@ -64,12 +57,20 @@ const USE_CASES3 = [
     smallText: 'Make user onboarding fast and secure',
   },
 ];
-export default function UseCases() {
+export default function UseCases({dropdown = false}) {
   return (
-    <div className="absolute left-0 z-10 w-full p-20 bg-white cursor-default top-full use-cases-dropdown-menu">
-      <div className="max-w-[1195px] mx-auto px-4 grid grid-cols-4 place-items-start items-end gap-x-10 gap-y-6 whitespace-nowrap">
+    <div
+      className={`w-full bg-white cursor-default top-full ${
+        dropdown ? 'use-cases-dropdown-menu absolute left-0 z-10 p-20' : ''
+      }`}
+    >
+      <div
+        className={`max-w-[1195px] mx-auto ${
+          dropdown ? 'px-4 grid-cols-3' : 'grid-cols-1'
+        } grid  place-items-start items-start gap-x-10 gap-y-6 whitespace-nowrap`}
+      >
         <div>
-          <p className="text-xs font-medium uppercase text-start text-secondary-200">
+          <p className="text-xs font-medium uppercase text-start text-secondary-150">
             INDUSTRIES
           </p>
           <div className="flex flex-col gap-6 mt-6">
@@ -86,7 +87,7 @@ export default function UseCases() {
           </div>
         </div>
         <div>
-          <p className="text-xs font-medium uppercase text-start text-secondary-200 ">
+          <p className="text-xs font-medium uppercase text-start text-secondary-150">
             Use DOJAH FOR
           </p>
           <div className="flex flex-col gap-6 mt-6">
@@ -103,8 +104,8 @@ export default function UseCases() {
           </div>
         </div>
         <div className="self-start">
-          <p className="invisible">...</p>
-          <div className="flex flex-col gap-6 mt-6">
+          <p className={`${dropdown ? 'invisible' : 'hidden'}`}>...</p>
+          <div className={`flex flex-col gap-6 ${dropdown ? 'mt-6' : ''}`}>
             {USE_CASES3.map(({href, externalUrl, text, smallText, icon}) => (
               <NavItem
                 key={text}

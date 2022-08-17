@@ -1,13 +1,18 @@
+import {useState} from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import Hyperlink from '../Hyperlink';
 import GetStarted from './GetStarted';
 import {
+  addIc,
+  closeMenu,
   dropdown,
   facebook,
   hamburger,
   linkedin,
   logo,
+  minusIc,
+  rightArrowBlue,
   slack,
   twitter,
   youtube,
@@ -19,6 +24,11 @@ import Products from './Navigation/Products';
 
 export default function Layout({children}) {
   const signinUrl = process.env.NEXT_PUBLIC_APP_SIGNIN;
+  const [isOpen, setIsOpen] = useState(false);
+  const [productsMenu, setProductsMenu] = useState(false);
+  const [useCasesMenu, setUseCasesMenu] = useState(false);
+  const [developersMenu, setDevelopersMenu] = useState(false);
+  const [companyMenu, setCompanyMenu] = useState(false);
   return (
     <>
       <a
@@ -47,7 +57,7 @@ export default function Layout({children}) {
                 <Image src={dropdown} alt="" width={16} height={16} />
               </div>
 
-              <Products />
+              <Products dropdown />
             </button>
             <button className="flex gap-2 px-4 py-[30px] group use-cases">
               <span className="text-white text-tiny">Use cases</span>
@@ -55,7 +65,7 @@ export default function Layout({children}) {
                 <Image src={dropdown} alt="" width={16} height={16} />
               </div>
 
-              <UseCases />
+              <UseCases dropdown />
             </button>
             <button className="flex gap-2 px-4 py-[30px] group developers">
               <span className="text-white text-tiny">Developers</span>
@@ -63,7 +73,7 @@ export default function Layout({children}) {
                 <Image src={dropdown} alt="" width={16} height={16} />
               </div>
 
-              <Developers />
+              <Developers dropdown />
             </button>
             <button className="flex gap-2 px-4 py-[30px] group company">
               <span className="text-white text-tiny">Company</span>
@@ -71,15 +81,20 @@ export default function Layout({children}) {
                 <Image src={dropdown} alt="" width={16} height={16} />
               </div>
 
-              <Company />
+              <Company dropdown />
             </button>
           </div>
-          <div className="block w-6 h-6 lg:hidden">
+          <div
+            onClick={() => setIsOpen(prev => !prev)}
+            className={`block relative ${
+              isOpen ? 'h-8 w-8' : 'w-6 h-6'
+            } lg:hidden`}
+          >
             <Image
-              src={hamburger}
+              src={isOpen ? closeMenu : hamburger}
               alt="hamburger menu"
-              width={24}
-              height={24}
+              width={isOpen ? 32 : 24}
+              height={isOpen ? 32 : 24}
             />
           </div>
           <div className="items-center hidden gap-4 lg:flex">
@@ -90,6 +105,113 @@ export default function Layout({children}) {
               className="inline-flex outline outline-1 outline-white px-[37px] pt-[16px] pb-[12px] rounded"
             >
               <span className="text-white text-tiny">Login</span>
+            </a>
+            <Hyperlink
+              text="Contact sales"
+              variant="primary"
+              externalUrl="https://calendly.com/dojah/dojah-sales"
+            />
+          </div>
+        </div>
+
+        <div
+          className={` ${
+            isOpen ? 'block' : 'hidden'
+          } min-h-screen bg-white max-w-[1195px] mx-auto px-4 pt-8`}
+        >
+          <div className="flex flex-col gap-6">
+            <Link href="/">
+              <>
+                <a
+                  onClick={() => setProductsMenu(prev => !prev)}
+                  className="cursor-pointer flex items-center justify-between transition-all duration-300"
+                >
+                  <span className="text-base text-secondary">Products</span>
+                  <Image
+                    alt=""
+                    src={productsMenu ? minusIc : addIc}
+                    width={24}
+                    height={24}
+                    className={`transition-all duration-300 ${
+                      productsMenu ? 'rotate-180' : ''
+                    }`}
+                  />
+                </a>
+                {productsMenu ? <Products /> : null}
+              </>
+            </Link>
+            <Link href="/">
+              <>
+                <a
+                  onClick={() => setUseCasesMenu(prev => !prev)}
+                  className="cursor-pointer flex items-center justify-between transition-all duration-300"
+                >
+                  <span className="text-base text-secondary">Use cases</span>
+                  <Image
+                    alt=""
+                    src={useCasesMenu ? minusIc : addIc}
+                    width={24}
+                    height={24}
+                    className={`transition-all duration-300 ${
+                      useCasesMenu ? 'rotate-180' : ''
+                    }`}
+                  />
+                </a>
+
+                {useCasesMenu ? <UseCases /> : null}
+              </>
+            </Link>
+            <Link href="/">
+              <>
+                <a
+                  onClick={() => setDevelopersMenu(prev => !prev)}
+                  className="cursor-pointer flex items-center justify-between transition-all duration-300"
+                >
+                  <span className="text-base text-secondary">Developers</span>
+                  <Image
+                    alt=""
+                    src={developersMenu ? minusIc : addIc}
+                    width={24}
+                    height={24}
+                    className={`transition-all duration-300 ${
+                      developersMenu ? 'rotate-180' : ''
+                    }`}
+                  />
+                </a>
+                {developersMenu ? <Developers /> : null}
+              </>
+            </Link>
+            <Link href="/">
+              <>
+                <a
+                  onClick={() => setCompanyMenu(prev => !prev)}
+                  className="cursor-pointer flex items-center justify-between transition-all duration-300"
+                >
+                  <span className="text-base text-secondary">Company</span>
+                  <Image
+                    alt=""
+                    src={companyMenu ? minusIc : addIc}
+                    width={24}
+                    height={24}
+                    className={`transition-all duration-300 ${
+                      companyMenu ? 'rotate-180' : ''
+                    }`}
+                  />
+                </a>
+                {companyMenu ? <Company /> : null}
+              </>
+            </Link>
+          </div>
+
+          <div className="mt-8 py-6 flex gap-4">
+            <a
+              href={signinUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 border border-primary rounded pb-3 pt-4 px-4"
+            >
+              <span className="text-tiny text-primary">Login</span>
+              <Image alt="" src={rightArrowBlue} width={16} height={16} />
             </a>
             <Hyperlink
               text="Contact sales"
@@ -147,17 +269,7 @@ export default function Layout({children}) {
                     </Link>
                     <Link href="/">
                       <a className="transition-all hover:text-white">
-                        Link Bank Accounts
-                      </a>
-                    </Link>
-                    <Link href="/">
-                      <a className="transition-all hover:text-white">
-                        Access Bank Accounts
-                      </a>
-                    </Link>
-                    <Link href="/">
-                      <a className="transition-all hover:text-white">
-                        Financial Transaction Analysis
+                        Financial Connections
                       </a>
                     </Link>
                     <Link href="/all-products/ip-device-check">

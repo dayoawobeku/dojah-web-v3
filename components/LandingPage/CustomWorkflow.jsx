@@ -66,26 +66,19 @@ function Carousel({maxcount = 3}) {
 function Tabs({step}) {
   if (step === 1) {
     return (
-      <video
-        width={1240}
-        loop
-        playsInline
-        muted
-        autoPlay
-        src="/onboarding-gif.mp4"
-      >
+      <video width={1178} loop playsInline muted autoPlay src="/onboarding.mp4">
         Your browser does not support the HTML5 Video element.
       </video>
     );
   } else if (step === 2) {
     return (
       <video
-        width={1240}
+        width={1178}
         loop
         playsInline
         muted
         autoPlay
-        src="/business-verification-gif.mp4"
+        src="/business-verification.mp4"
       >
         Your browser does not support the HTML5 Video element.
       </video>
@@ -93,12 +86,12 @@ function Tabs({step}) {
   } else if (step === 3) {
     return (
       <video
-        width={1240}
+        width={1178}
         loop
         playsInline
         muted
         autoPlay
-        src="/fraud-detection-gif.mp4"
+        src="/fraud-detection.mp4"
       >
         Your browser does not support the HTML5 Video element.
       </video>

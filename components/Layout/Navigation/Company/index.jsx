@@ -24,14 +24,22 @@ const COMPANY = [
   {href: '/privacy-policy', text: 'Privacy Policy', icon: <PrivacyPolicy />},
   {href: '/brand-kit', text: 'Brand Kit', icon: <BrandKit />},
 ];
-export default function Company() {
+export default function Company({dropdown = false}) {
   return (
-    <div className="absolute left-0 z-10 w-full p-20 bg-white cursor-default top-full company-dropdown-menu">
-      <div className="max-w-[1195px] mx-auto px-4">
-        <p className="text-xs font-medium uppercase text-start text-secondary-200">
+    <div
+      className={`w-full bg-white cursor-default top-full ${
+        dropdown ? 'company-dropdown-menu absolute left-0 z-10 p-20' : ''
+      }`}
+    >
+      <div className={`max-w-[1195px] mx-auto ${dropdown ? 'px-4' : ''}`}>
+        <p className="text-xs font-medium uppercase text-start text-secondary-150">
           company
         </p>
-        <div className="grid items-end grid-cols-4 mt-6 place-items-start gap-x-10 gap-y-6">
+        <div
+          className={`grid items-end ${
+            dropdown ? 'grid-cols-4' : 'grid-cols-1'
+          } mt-6 place-items-start gap-x-10 gap-y-6`}
+        >
           {COMPANY.map(({href, externalUrl, text, icon}) => (
             <NavItem
               key={text}

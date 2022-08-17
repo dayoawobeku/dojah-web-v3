@@ -89,6 +89,9 @@ export {default as addressIllustration} from './address-verification-illustratio
 export {default as ipDeviceCheckIllustration} from './ip-device-check-illustration.svg';
 export {default as phoneNumberCheckIllustration} from './phone-number-check-illustration.svg';
 export {default as emailCheckIllustration} from './email-check-illustration.svg';
+export {default as addIc} from './add-ic.svg';
+export {default as minusIc} from './minus-ic.svg';
+export {default as closeMenu} from './close-menu.svg';
 
 // PNGs
 export {default as greenHouseLogo} from './greenhouse-capital-logo.png';
@@ -129,4 +132,6 @@ export {default as aboutUs7} from './about-image-7.png';
 export {default as videoBg} from './video-bg.png';
 export {default as polygon} from './polygon-small.png';
 export {default as homepageWidgets} from './homepage-widgets.png';
+export {default as homepageWidgetsSm} from './homepage-widgets-sm.png';
 export {default as homepageNocode} from './homepage-nocode.png';
+export {default as homepageNocodeSm} from './homepage-nocode-sm.png';
