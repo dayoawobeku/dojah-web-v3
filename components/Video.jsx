@@ -18,7 +18,7 @@ export default function Video() {
         </button>
         <Modal show={isOpen} isOpen={isOpen} setIsOpen={setIsOpen}>
           <iframe
-            className="w-full h-full"
+            className="w-full h-full bg-black"
             src="https://www.youtube.com/embed/tgbNymZ7vqY"
           ></iframe>
           <button

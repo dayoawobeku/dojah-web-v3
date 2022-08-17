@@ -33,12 +33,11 @@ export default function DirectIntegration() {
           Everything you need to access and assess identity data
         </h3>
         <p className="mt-4 text-base text-secondary-300">
-          Improve onboarding with smooth-running identification and verification
-          processes by directly integrating with our products. Our products span
-          across multiple data points (Financial, Biometric , Government , AML
-          Compliance, Address, etc). There are also additional services to help
-          facilitate onboarding, such as phone number and email verification
-          options using SMS, Voice, and WhatsApp notifications.
+          Verify and onboard customers using Financial data, Biometric data,
+          Government data, Telco data and Anti-Money Laundering data and many
+          more. Explore API integrations, widgets, and No-Code tools on Dojah to
+          build out custom onboarding flows for all stages of your customer
+          journey.
         </p>
       </div>
       <div className="flex flex-col gap-4 basis-full md:basis-1/2">

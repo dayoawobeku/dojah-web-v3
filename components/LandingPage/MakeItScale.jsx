@@ -35,9 +35,10 @@ export default function MakeItScale() {
           Whatever you’re building, make it scale with Dojah
         </h3>
         <p className="max-w-[807px] mt-8 md:mt-6 text-base text-secondary md:text-secondary-100">
-          Dojah helps businesses across several industries achieve customer
-          (individuals/businesses) acquisition, fraud detection, and also
-          compliance. More than the industries listed, Dojah is built for you.
+          Dojah helps businesses verify identity, beat fraud, stay compliant and
+          onboard customers safely. We&apos;re trusted by businesses in the
+          financial, logitsics, eCommerce, healthcare, HR Management alongside
+          other industries.
         </p>
         <div className="grid grid-cols-1 gap-16 mt-16 md:gap-8 md:grid-cols-3 md:mt-20">
           <Services

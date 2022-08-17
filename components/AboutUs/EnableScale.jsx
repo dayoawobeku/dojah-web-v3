@@ -1,21 +1,21 @@
 import Image from 'next/image';
 import React from 'react';
-import {heroIllustration} from '../../assets/images/images';
+import {enableScale} from '../../assets/images/images';
 
 export default function EnableScale() {
   return (
-    <section className="bg-white-800 py-24">
-      <div className="flex gap-16 max-w-[1195px] mx-auto px-4">
+    <section className="py-24 bg-white-800 bg-[url('../assets/images/enable-scale-art.svg')] bg-no-repeat bg-right bg-contain">
+      <div className="flex gap-2 items-end max-w-[1195px] mx-auto px-4">
         <div className="flex flex-col items-start max-w-[585px]">
-          <h2 className="text-xl text-secondary font-bold">
+          <h2 className="text-xl font-bold text-secondary">
             Enable scale through transparency and credibility
           </h2>
-          <p className="mt-8 text-base text-secondary-300">
+          <p className="mt-8 text-base text-secondary-300 max-w-[487px]">
             The digital world has enabled us all to access global
             opportunities—remote work, communication with people across
             continents, and onboarding customers across the globe.
           </p>
-          <p className="mt-4 text-base text-secondary-300">
+          <p className="mt-4 text-base text-secondary-300 max-w-[487px]">
             Now, we’re immersed in a remote world that enables us to not just
             build groundbreaking solutions but to deploy them at scale for a
             global audience. Because why not?
@@ -43,8 +43,12 @@ export default function EnableScale() {
               success as you scale?
             </li>
           </ul>
+          <p className="mt-8 text-base text-secondary-300 max-w-[513px]">
+            Thanks to our powerful technology and smart people, we’re making all
+            these possible and easy for modern businesses in Africa.
+          </p>
         </div>
-        <Image alt="" src={heroIllustration} width={505} height={561} />
+        <Image alt="" src={enableScale} width={607.9} height={799.55} />
       </div>
     </section>
   );

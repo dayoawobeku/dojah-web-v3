@@ -14,10 +14,10 @@ export default function Verification({
   return (
     <div className="flex items-center gap-21 justify-between max-w-[1051px] mx-auto">
       <div className="flex flex-col gap-2 max-w-[289px]">
-        <div className="w-10 h-10 relative">
+        <div className="relative w-10 h-10">
           <Image alt="" src={polygon} layout="fill" />
         </div>
-        <p className="font-bold text-3md text-secondary">
+        <p className="font-bold whitespace-nowrap text-3md text-secondary">
           {heading1 ?? 'Biometric Verification'}
         </p>
         <p className="text-secondary-150 text-base max-w-[266px]">
@@ -36,10 +36,10 @@ export default function Verification({
         </Link>
       </div>
       <div className="flex flex-col gap-2 max-w-[289px]">
-        <div className="w-10 h-10 relative">
+        <div className="relative w-10 h-10">
           <Image alt="" src={polygon} layout="fill" />
         </div>
-        <p className="font-bold text-3md text-secondary">
+        <p className="font-bold whitespace-nowrap text-3md text-secondary">
           {heading2 ?? 'Gov. ID Verification'}
         </p>
         <p className="text-secondary-150 text-base max-w-[266px]">
@@ -57,27 +57,30 @@ export default function Verification({
           </a>
         </Link>
       </div>
-      <div className="flex flex-col gap-2 max-w-[289px]">
-        <div className="w-10 h-10 relative">
-          <Image alt="" src={polygon} layout="fill" />
+      <div className="flex flex-col gap-2 w-[289px]">
+        <div className="relative w-10 h-10">
+          <Image alt="" src={heading3 ? polygon : ''} layout="fill" />
         </div>
-        <p className="font-bold text-3md text-secondary">
-          {heading3 ?? 'Address Verification'}
+        <p className="font-bold whitespace-nowrap text-3md text-secondary">
+          {heading3 ? heading3 : ''}
         </p>
         <p className="text-secondary-150 text-base max-w-[266px]">
-          {paragraph3 ??
-            'Automatically capture and validate the physical location of your users in seconds'}
+          {paragraph3 ? paragraph3 : ''}
         </p>
-        <Link href="/">
-          <a className="flex items-center gap-2 w-fit">
-            <span className="-mb-1 text-primary">
-              {explore
-                ? 'Explore this product'
-                : 'Start using biometric verification'}
-            </span>
-            <Image src={rightArrowBlue} alt="" width={16} height={16} />
-          </a>
-        </Link>
+        {heading3 ? (
+          <Link href="/">
+            <a className="flex items-center gap-2 w-fit">
+              <span className="-mb-1 text-primary">
+                {explore
+                  ? 'Explore this product'
+                  : 'Start using biometric verification'}
+              </span>
+              <Image src={rightArrowBlue} alt="" width={16} height={16} />
+            </a>
+          </Link>
+        ) : (
+          ''
+        )}
       </div>
     </div>
   );

@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import {checkGreen, heroIllustration} from '../../../assets/images/images';
+import {checkGreen, informalDemography} from '../../../assets/images/images';
 
 export default function Demography() {
   return (
@@ -28,12 +28,7 @@ export default function Demography() {
           </div>
         </div>
       </div>
-      <Image
-        src={heroIllustration}
-        alt="art illustration of man taking selfie on mobile phone"
-        width={505}
-        height={561}
-      />
+      <Image src={informalDemography} alt="" width={493.25} height={523.36} />
     </section>
   );
 }

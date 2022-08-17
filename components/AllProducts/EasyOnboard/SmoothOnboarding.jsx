@@ -2,18 +2,30 @@ import {useState} from 'react';
 import Image from 'next/image';
 import {codeImg} from '../../../assets/images/images';
 
-export default function SmoothOnboarding() {
+export default function SmoothOnboarding({
+  heading,
+  label = false,
+  text1,
+  text2,
+  text3,
+  text4,
+}) {
   const [active, setActive] = useState(0);
 
   return (
-    <section className="bg-secondary py-24">
+    <section className="py-24 bg-secondary">
       <div className="flex items-start md:justify-between justify-center flex-wrap md:flex-nowrap gap-16 max-w-[1195px] mx-auto px-4">
         <div className="max-w-[553px]">
-          <h4 className="text-white font-bold text-3md leading-10">
-            Create a smooth onboarding flow on your own terms
+          {label && (
+            <span className="mb-1 text-xs font-medium uppercase text-danger">
+              how it works
+            </span>
+          )}
+          <h4 className="font-bold leading-10 text-white text-3md">
+            {heading}
           </h4>
 
-          <div className="mt-10 before:bg-secondary-500 before:absolute before:block before:rounded-lg before:w-1 before:h-full before:-left-1 before:transition-all relative">
+          <div className="relative mt-10 before:bg-secondary-500 before:absolute before:block before:rounded-lg before:w-1 before:h-full before:-left-1 before:transition-all">
             <div
               onClick={() => setActive(0)}
               onFocus={() => setActive(0)}
@@ -35,8 +47,7 @@ export default function SmoothOnboarding() {
                   active === 0 ? 'text-secondary-100' : 'text-[#B3B3B660]'
                 } text-base my-2 transition-all duration-300 ease-in-out`}
               >
-                Setup your app and fully customise your users’ experience on the
-                Dojah dashboard.
+                {text1}
               </p>
             </div>
             <div
@@ -60,8 +71,7 @@ export default function SmoothOnboarding() {
                   active === 1 ? 'text-secondary-100' : 'text-[#B3B3B660]'
                 } text-base my-2 transition-all duration-300 ease-in-out`}
               >
-                Create a custom onboarding flow or select from our library of
-                pre-existing templates
+                {text2}
               </p>
             </div>
             <div
@@ -85,9 +95,7 @@ export default function SmoothOnboarding() {
                   active === 2 ? 'text-secondary-100' : 'text-[#B3B3B660]'
                 } text-base my-2 transition-all duration-300 ease-in-out`}
               >
-                Configure your onboarding widget with options for manual or
-                automatic verification, preferred verification type and many
-                more functionalities.
+                {text3}
               </p>
             </div>
             <div
@@ -111,9 +119,7 @@ export default function SmoothOnboarding() {
                   active === 3 ? 'text-secondary-100' : 'text-[#B3B3B660]'
                 } text-base my-2 transition-all duration-300 ease-in-out`}
               >
-                Configure your onboarding widget with options for manual or
-                automatic verification, preferred verification type and many
-                more functionalities.
+                {text4}
               </p>
             </div>
           </div>

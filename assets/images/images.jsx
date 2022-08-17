@@ -92,6 +92,20 @@ export {default as emailCheckIllustration} from './email-check-illustration.svg'
 export {default as addIc} from './add-ic.svg';
 export {default as minusIc} from './minus-ic.svg';
 export {default as closeMenu} from './close-menu.svg';
+export {default as informalDemography} from './informal-demography.svg';
+export {default as informalDemographyPhoneCheck} from './informal-demography-phone-check.svg';
+export {default as predictiveText} from './predictive-text.svg';
+export {default as efficientOperations} from './efficient-operations.svg';
+export {default as comprehensiveData} from './comprehensive-data.svg';
+export {default as identifyLocation} from './identify-location.svg';
+export {default as easyLookupHero} from './easy-lookup-hero.svg';
+export {default as easyOnboardHero} from './easy-onboard-hero.svg';
+export {default as easyConnectHero} from './easy-connect-hero.svg';
+export {default as financialServicesHero} from './financial-services-hero.svg';
+export {default as logisticsHero} from './logistics-hero.svg';
+export {default as retailHero} from './retail-hero.svg';
+export {default as fraudPreventionHero} from './fraud-prevention-hero.svg';
+export {default as enableScale} from './enable-scale.svg';
 
 // PNGs
 export {default as greenHouseLogo} from './greenhouse-capital-logo.png';
@@ -133,5 +147,7 @@ export {default as videoBg} from './video-bg.png';
 export {default as polygon} from './polygon-small.png';
 export {default as homepageWidgets} from './homepage-widgets.png';
 export {default as homepageWidgetsSm} from './homepage-widgets-sm.png';
+export {default as homepageWidgetsLg} from './homepage-widgets-lg.png';
 export {default as homepageNocode} from './homepage-nocode.png';
 export {default as homepageNocodeSm} from './homepage-nocode-sm.png';
+export {default as homepageNocodeLg} from './homepage-nocode-lg.png';

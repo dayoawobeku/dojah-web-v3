@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import {checkGreen, heroIllustration} from '../../../assets/images/images';
+import {checkGreen, identifyLocation} from '../../../assets/images/images';
 
 export default function IdentifyLocation() {
   return (
@@ -13,7 +13,7 @@ export default function IdentifyLocation() {
           non-authorized fraudsters. Detect the following data points:
         </p>
 
-        <div className="mt-10 grid grid-cols-2 gap-x-18 w-max">
+        <div className="grid grid-cols-2 mt-10 gap-x-18 w-max">
           <div className="flex flex-col gap-6">
             <div className="flex items-center gap-2">
               <Image alt="" src={checkGreen} width={18} height={18} />
@@ -68,12 +68,7 @@ export default function IdentifyLocation() {
           </div>
         </div>
       </div>
-      <Image
-        src={heroIllustration}
-        alt="art illustration of man taking selfie on mobile phone"
-        width={505}
-        height={561}
-      />
+      <Image src={identifyLocation} alt="" width={739} height={488.6} />
     </section>
   );
 }

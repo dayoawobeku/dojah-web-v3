@@ -1,15 +1,10 @@
 import Image from 'next/image';
-import {checkGreen, heroIllustration} from '../../../assets/images/images';
+import {checkGreen, comprehensiveData} from '../../../assets/images/images';
 
 export default function ComprehensiveData() {
   return (
-    <section className="flex items-center justify-center md:justify-between gap-18 md:gap-6 flex-wrap md:flex-nowrap max-w-[1195px] mx-auto px-4 py-16 md:py-21">
-      <Image
-        src={heroIllustration}
-        alt="art illustration of man taking selfie on mobile phone"
-        width={505}
-        height={561}
-      />
+    <section className="flex items-center justify-center md:justify-between gap-18 md:gap-12 flex-wrap md:flex-nowrap max-w-[1195px] mx-auto px-4 py-16 md:py-21">
+      <Image src={comprehensiveData} alt="" width={685} height={394} />
       <div className="md:basis-1/2">
         <h3 className="mt-2 text-lg font-bold md:text-2lg text-secondary">
           Capture comprehensive data

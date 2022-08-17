@@ -1,11 +1,11 @@
 import Image from 'next/image';
-import {checkGreen, heroIllustration} from '../../../assets/images/images';
+import {checkGreen, efficientOperations} from '../../../assets/images/images';
 
 export default function EfficientOperations() {
   return (
     <section className="bg-[#ECF3FF]">
       <div className="flex items-center justify-center md:justify-between gap-18 md:gap-6 flex-wrap md:flex-nowrap max-w-[1195px] mx-auto px-4 py-16 md:py-21">
-        <div className="md:basis-1/2">
+        <div className="md:basis-1/2 max-w-[467px]">
           <h3 className="mt-2 text-lg font-bold md:text-2lg text-secondary">
             Build efficient operations and a smoother experience
           </h3>
@@ -31,12 +31,7 @@ export default function EfficientOperations() {
             </div>
           </div>
         </div>
-        <Image
-          src={heroIllustration}
-          alt="art illustration of man taking selfie on mobile phone"
-          width={505}
-          height={561}
-        />
+        <Image src={efficientOperations} alt="" width={491} height={455.2} />
       </div>
     </section>
   );

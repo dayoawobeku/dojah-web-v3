@@ -22,7 +22,12 @@ export default function DojahLand({heading, paragraph, linkText}) {
           <p className="my-4 md:my-6 text-base text-secondary-200">
             {paragraph}
           </p>
-          <Hyperlink text={linkText} variant="primary" arrow />
+          <Hyperlink
+            text={linkText}
+            variant="primary"
+            arrow
+            externalUrl="https://dojah.medium.com/"
+          />
         </div>
         <div className="flex items-center gap-8">
           <div className="flex flex-col gap-10">

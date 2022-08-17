@@ -21,18 +21,26 @@ function Position({position, type, url = 'sth'}) {
   );
 }
 
-export default function Positions() {
+export default function Positions({positions = 0}) {
   return (
     <section className="bg-white-800">
       <div className="flex flex-col items-start max-w-[1195px] mx-auto px-4 py-16 md:pt-14 md:pb-21">
         <p className="text-danger text-tiny uppercase">hiring</p>
         <p className="mt-2 text-secondary text-3md font-bold">Open positions</p>
-        <div className="mt-11 w-full">
-          <p className="text-base sm:text-2md text-secondary mb-4 sm:mb-5">
-            PRODUCT & DESIGN
+
+        {!positions ? (
+          <p className="mt-6 text-base text-secondary">
+            There are currently no open positions available, when there are,
+            they would be displayed here.
           </p>
-          <Position position="Product Designer" type="Remote, Full-Time" />
-        </div>
+        ) : (
+          <div className="mt-11 w-full">
+            <p className="text-base sm:text-2md text-secondary mb-4 sm:mb-5">
+              PRODUCT & DESIGN
+            </p>
+            <Position position="Product Designer" type="Remote, Full-Time" />
+          </div>
+        )}
       </div>
     </section>
   );

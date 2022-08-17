@@ -53,6 +53,14 @@ html {
 }
 
 @layer components {
+  input[type='search'] {
+    @apply pl-12 pr-4;
+  }
+
+  input[type='search']::placeholder {
+    @apply text-black-200;
+  }
+
   /* nav items */
   .products-dropdown-menu,
   .developers-dropdown-menu,
@@ -112,11 +120,13 @@ html {
     fill: #0b1c56 !important;
   }
 
-  input[type='search'] {
-    @apply pl-12 pr-4;
+  .scroll-inline::-webkit-scrollbar {
+    display: none;
   }
 
-  input[type='search']::placeholder {
-    @apply text-black-200;
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .scroll-inline {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
   }
 }

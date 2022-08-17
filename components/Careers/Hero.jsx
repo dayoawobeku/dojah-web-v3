@@ -23,7 +23,12 @@ export default function Hero() {
             best work and be a part of our journey to enable confidence and
             credibility in the digital economy.
           </p>
-          <Hyperlink text="Read more about us" variant="primary" arrow />
+          <Hyperlink
+            text="Read more about us"
+            variant="primary"
+            arrow
+            href="/about-us"
+          />
           <div className="flex flex-col mt-20 md:mt-14">
             <p className="text-secondary-150 sm:text-secondary-300 font-bold sm:font-normal">
               Backed by

@@ -10,8 +10,8 @@ const DEVELOPERS = [
     text: 'Documentation',
     icon: <Documentation />,
   },
-  {href: '/', text: 'Api references', icon: <ApiReferences />},
-  {href: '/', text: 'Api status', icon: <ApiStatus />},
+  {href: '/', text: 'API references', icon: <ApiReferences />},
+  {href: '/', text: 'API status', icon: <ApiStatus />},
   {href: '/', text: 'FAQs', icon: <Faqs />},
 ];
 export default function Developers({dropdown = false}) {

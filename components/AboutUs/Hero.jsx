@@ -29,8 +29,8 @@ export default function Hero() {
           analysis.
         </p>
 
-        <div className="mt-10 flex items-center gap-1">
-          <span className="text-sm text-secondary-200 font-bold -mb-1">
+        <div className="flex items-center gap-1 mt-10">
+          <span className="-mb-1 text-sm font-bold text-secondary-200">
             Backed by
           </span>
           <Image alt="" src={yCombinatorLogo} width={135} height={38.5} />
@@ -38,7 +38,7 @@ export default function Hero() {
 
         <div className="translate-y-1/2 bg-white h-[136px] w-[102%] translate-x-0 rounded-[100%] z-50 -mt-[68px]" />
         <div
-          className="inline-flex w-full items-center gap-10 overflow-x-auto relative"
+          className="relative inline-flex items-center w-full gap-10 overflow-x-auto"
           style={{display: '-webkit-box'}}
         >
           <div className="relative w-[350px] h-[408.61px]">

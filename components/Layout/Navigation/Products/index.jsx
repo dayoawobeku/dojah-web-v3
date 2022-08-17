@@ -28,7 +28,7 @@ const PRODUCTS = [
     smallText: 'Extract and verify document data',
   },
   {
-    href: '/all-products/',
+    href: '/all-products/biometric-verification',
     text: 'Biometric Verification',
     icon: <BiometricVerification />,
     smallText: 'Authenticate users with facial biometrics',
@@ -73,7 +73,7 @@ const PRODUCTS3 = [
     smallText: 'Check that a user is a live human',
   },
   {
-    href: '/all-products/',
+    href: '/all-products/aml-check',
     text: 'AML Check',
     icon: <AmlCheck />,
     smallText: 'Screen users against global sanctions',
@@ -82,13 +82,13 @@ const PRODUCTS3 = [
 
 const PRODUCTS4 = [
   {
-    href: '/all-products/',
+    href: '/all-products/financial-data-widget',
     text: 'Financial Data Widget',
     icon: <FinancialDataWidget />,
     smallText: 'Connect and analyse financial data ',
   },
   {
-    href: '/all-products/',
+    href: '/all-products/id-verification-widget',
     text: 'Identity Verification Widget',
     icon: <IdentityVerificationWidget />,
     smallText: 'Onboard and verify genuine users fast',

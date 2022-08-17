@@ -1,9 +1,5 @@
 import Image from 'next/image';
-import {
-  moneymieLogo,
-  pricingCarouselDots,
-  pricingCarouselDotsSm,
-} from '../assets/images/images';
+import {moneymieLogo} from '../assets/images/images';
 
 export default function CustomerStories() {
   return (
@@ -23,19 +19,10 @@ export default function CustomerStories() {
             Dojah gives us almost nothing to worry about so we strongly
             recommend
           </p>
-          <div className="hidden sm:block">
-            <Image alt="" src={pricingCarouselDots} />
-          </div>
-          <p className="font-bold text-white sm:text-primary-100 text-tiny sm:text-2md sm:mt-7">
-            Babs Ogundeyi, CEO Kuda
-          </p>
-          <p className="sm:hidden text-secondary-200 text-sm">
-            Product Manager, Flex Finance
+          <p className="font-bold text-primary-100 text-tiny sm:text-2md sm:mt-7">
+            Opeyemi Awoyemi, Co-Founder, Moneymie
           </p>
         </div>
-      </div>
-      <div className="sm:hidden mt-5 text-center">
-        <Image alt="" src={pricingCarouselDotsSm} />
       </div>
     </section>
   );

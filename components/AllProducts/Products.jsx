@@ -46,17 +46,6 @@ function Tabs() {
           identity verification
         </a>
       </Link>
-      <Link href="/all-products/financial-services" scroll={false}>
-        <a
-          className={`text-xs ${
-            pathname === '/all-products/financial-services'
-              ? 'text-primary border-b-2 border-b-primary'
-              : 'text-secondary-150'
-          }  uppercase py-[17px] px-[10px]`}
-        >
-          financial services
-        </a>
-      </Link>
       <Link href="/all-products/authentication-and-checks" scroll={false}>
         <a
           className={`text-xs ${
@@ -106,7 +95,7 @@ export default function Products({ALL_PRODUCTS}) {
                 <Product key={index} {...product} />
               ))
             ) : (
-              <p className="whitespace-nowrap">
+              <p className="text-center md:whitespace-nowrap">
                 We don&apos;t have what you&apos;re searching for atm 🙄
               </p>
             )}

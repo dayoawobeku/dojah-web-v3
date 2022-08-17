@@ -262,14 +262,9 @@ export default function Layout({children}) {
                         Address Verification
                       </a>
                     </Link>
-                    <Link href="/all-products/bank-account-verification">
-                      <a className="transition-all hover:text-white">
-                        Bank Account Verification
-                      </a>
-                    </Link>
                     <Link href="/">
                       <a className="transition-all hover:text-white">
-                        Financial Connections
+                        Financial Connection
                       </a>
                     </Link>
                     <Link href="/all-products/ip-device-check">
@@ -350,11 +345,6 @@ export default function Layout({children}) {
                     <Link href="/">
                       <a className="transition-all hover:text-white">
                         Business Verification
-                      </a>
-                    </Link>
-                    <Link href="/">
-                      <a className="transition-all hover:text-white">
-                        Authentication
                       </a>
                     </Link>
                     <Link href="/">

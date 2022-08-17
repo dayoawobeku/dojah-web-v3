@@ -2,7 +2,7 @@ import Image from 'next/image';
 import {heroIllustration} from '../assets/images/images';
 import Hyperlink from './Hyperlink';
 
-export default function HeroLight({heading, paragraph}) {
+export default function HeroLight({heading, paragraph, illustration}) {
   const signupUrl = process.env.NEXT_PUBLIC_APP_SIGNUP;
 
   return (
@@ -35,7 +35,7 @@ export default function HeroLight({heading, paragraph}) {
           </div>
         </div>
         <Image
-          src={heroIllustration}
+          src={illustration ?? heroIllustration}
           alt="art illustration of man taking selfie on mobile phone"
           width={585}
           height={583}

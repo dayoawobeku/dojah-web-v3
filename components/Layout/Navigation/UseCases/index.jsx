@@ -36,7 +36,7 @@ const USE_CASES2 = [
     smallText: 'Detect & stop fraud with a smooth user experience',
   },
   {
-    href: '/',
+    href: '/business-verification',
     text: 'Business Verification',
     icon: <BusinessVerification />,
     smallText: 'Protect your business interactions, verify',
@@ -45,13 +45,13 @@ const USE_CASES2 = [
 
 const USE_CASES3 = [
   {
-    href: '/',
+    href: '/geolocation',
     text: 'Geolocation',
     icon: <Geolocation />,
     smallText: 'Identify user location when they use your platform',
   },
   {
-    href: '/',
+    href: '/onboarding-and-verification',
     text: 'Onboarding & Verification',
     icon: <OnboardingVerification />,
     smallText: 'Make user onboarding fast and secure',

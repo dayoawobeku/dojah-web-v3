@@ -1,20 +1,20 @@
 import {useState} from 'react';
 import Image from 'next/image';
-import {codeImg} from '../../../assets/images/images';
+import {predictiveText} from '../../../assets/images/images';
 import Hyperlink from '../../Hyperlink';
 
 export default function BusinessSafe() {
   const [active, setActive] = useState(0);
 
   return (
-    <section className="bg-secondary py-24">
-      <div className="flex items-end md:justify-between justify-center flex-wrap md:flex-nowrap gap-16 max-w-[1195px] mx-auto px-4">
+    <section className="py-24 bg-secondary">
+      <div className="flex items-center justify-center md:justify-between flex-wrap md:flex-nowrap gap-5 max-w-[1195px] mx-auto px-4">
         <div className="max-w-xl">
-          <h4 className="text-white font-bold text-xl">
+          <h4 className="text-xl font-bold text-white">
             Keep your business safe and operational costs down
           </h4>
 
-          <div className="mt-10 before:bg-secondary-500 before:absolute before:block before:rounded-lg before:w-1 before:h-full before:-left-1 before:transition-all relative">
+          <div className="relative mt-10 before:bg-secondary-500 before:absolute before:block before:rounded-lg before:w-1 before:h-full before:-left-1 before:transition-all">
             <div
               onClick={() => setActive(0)}
               tabIndex={0}
@@ -78,7 +78,7 @@ export default function BusinessSafe() {
             </div>
           </div>
         </div>
-        <Image alt="" src={codeImg} width={580} height={564} />
+        <Image alt="" src={predictiveText} width={660.51} height={662.12} />
       </div>
     </section>
   );

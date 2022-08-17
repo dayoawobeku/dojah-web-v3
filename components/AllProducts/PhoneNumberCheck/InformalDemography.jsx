@@ -1,18 +1,21 @@
 import Image from 'next/image';
-import {checkGreen, heroIllustration} from '../../../assets/images/images';
+import {
+  checkGreen,
+  informalDemographyPhoneCheck,
+} from '../../../assets/images/images';
 
 export default function InformalDemography() {
   return (
     <section className="bg-secondary">
       <div className="flex items-center justify-center md:justify-between gap-18 md:gap-24 flex-wrap md:flex-nowrap max-w-[1043px] mx-auto px-4 py-16 md:py-21">
         <Image
-          src={heroIllustration}
-          alt="art illustration of man taking selfie on mobile phone"
-          width={505}
-          height={561}
+          src={informalDemographyPhoneCheck}
+          alt=""
+          width={518}
+          height={459.88}
         />
         <div className="md:basis-1/2 max-w-[467px]">
-          <h3 className="mt-2 text-2lg font-bold md:text-2lg text-white">
+          <h3 className="mt-2 font-bold text-white text-2lg md:text-2lg">
             Reach the informal demography
           </h3>
           <p className="mt-4 mb-4 text-base text-primary-100">
