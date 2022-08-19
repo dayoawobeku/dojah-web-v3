@@ -124,7 +124,7 @@ export default function Layout({children}) {
               <>
                 <a
                   onClick={() => setProductsMenu(prev => !prev)}
-                  className="cursor-pointer flex items-center justify-between transition-all duration-300"
+                  className="flex items-center justify-between transition-all duration-300 cursor-pointer"
                 >
                   <span className="text-base text-secondary">Products</span>
                   <Image
@@ -144,7 +144,7 @@ export default function Layout({children}) {
               <>
                 <a
                   onClick={() => setUseCasesMenu(prev => !prev)}
-                  className="cursor-pointer flex items-center justify-between transition-all duration-300"
+                  className="flex items-center justify-between transition-all duration-300 cursor-pointer"
                 >
                   <span className="text-base text-secondary">Use cases</span>
                   <Image
@@ -165,7 +165,7 @@ export default function Layout({children}) {
               <>
                 <a
                   onClick={() => setDevelopersMenu(prev => !prev)}
-                  className="cursor-pointer flex items-center justify-between transition-all duration-300"
+                  className="flex items-center justify-between transition-all duration-300 cursor-pointer"
                 >
                   <span className="text-base text-secondary">Developers</span>
                   <Image
@@ -185,7 +185,7 @@ export default function Layout({children}) {
               <>
                 <a
                   onClick={() => setCompanyMenu(prev => !prev)}
-                  className="cursor-pointer flex items-center justify-between transition-all duration-300"
+                  className="flex items-center justify-between transition-all duration-300 cursor-pointer"
                 >
                   <span className="text-base text-secondary">Company</span>
                   <Image
@@ -203,12 +203,12 @@ export default function Layout({children}) {
             </Link>
           </div>
 
-          <div className="mt-8 py-6 flex gap-4">
+          <div className="flex gap-4 py-6 mt-8">
             <a
               href={signinUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 border border-primary rounded pb-3 pt-4 px-4"
+              className="flex items-center gap-2 px-4 pt-4 pb-3 border rounded border-primary"
             >
               <span className="text-tiny text-primary">Login</span>
               <Image alt="" src={rightArrowBlue} width={16} height={16} />
@@ -252,7 +252,7 @@ export default function Layout({children}) {
                         Document Verification
                       </a>
                     </Link>
-                    <Link href="/">
+                    <Link href="/all-products/biometric-verification">
                       <a className="transition-all hover:text-white">
                         Biometric Verification
                       </a>
@@ -262,7 +262,7 @@ export default function Layout({children}) {
                         Address Verification
                       </a>
                     </Link>
-                    <Link href="/">
+                    <Link href="/all-products/financial-connection">
                       <a className="transition-all hover:text-white">
                         Financial Connection
                       </a>
@@ -282,22 +282,22 @@ export default function Layout({children}) {
                         Phone Number Check
                       </a>
                     </Link>
-                    <Link href="/">
+                    <Link href="/all-products/liveness-check">
                       <a className="transition-all hover:text-white">
                         Liveness Check
                       </a>
                     </Link>
-                    <Link href="/">
+                    <Link href="/all-products/aml-check">
                       <a className="transition-all hover:text-white">
                         AML Check
                       </a>
                     </Link>
-                    <Link href="/">
+                    <Link href="/all-products/financial-data-widget">
                       <a className="transition-all hover:text-white">
                         Financial Data Widget
                       </a>
                     </Link>
-                    <Link href="/">
+                    <Link href="/all-products/id-verification-widget">
                       <a className="transition-all hover:text-white">
                         Identity Verification Widget
                       </a>
@@ -429,7 +429,7 @@ export default function Layout({children}) {
                 ©{new Date().getFullYear()} Dojah. All rights reserved
               </p>
               <div className="flex items-center gap-4">
-                <a href="">
+                <a href="https://twitter.com/DojahInc">
                   <Image
                     src={twitter}
                     alt="twitter icon"
@@ -437,7 +437,7 @@ export default function Layout({children}) {
                     height={20}
                   />
                 </a>
-                <a href="">
+                <a href="https://join.slack.com/t/dojahinc/shared_invite/zt-ng9ch04k-bT5sVBnTY6Fa1ffQ0SAxpQ">
                   <Image src={slack} alt="slack icon" width={20} height={20} />
                 </a>
                 <a href="">
@@ -448,7 +448,7 @@ export default function Layout({children}) {
                     height={20}
                   />
                 </a>
-                <a href="">
+                <a href="https://www.linkedin.com/company/dojah/mycompany">
                   <Image
                     src={linkedin}
                     alt="linkedin icon"

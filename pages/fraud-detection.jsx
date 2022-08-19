@@ -25,7 +25,24 @@ export default function FraudDetection() {
         text3="Enhance your decision-making process"
         text4="Retain genuine customers and grow revenue"
       />
-      <SuspiciousSignups />
+      <SuspiciousSignups
+        heading1="Protect against suspicious sign ups and impersonation"
+        paragraph1="Biometric verification with selfies, short videos and fingerprints helps you automatically confirm that the genuine user is live and the presented biometrics matches a valid ID. This way, you’re able to spot fraudsters at the gate before they gain entry to your platform or impersonate an unsuspecting user."
+        linkText1="Start using Biometric Verification"
+        href1="/all-products/biometric-verification"
+        heading2="Catch up to 98% of document and identity fraud attempts"
+        paragraph2="Dojah’s global identity verification, covers over 3,000 document types from 150+ countries. Our Document Verification APIs, widgets and no-code tools help you automatically spot forgeries and counterfeits on physical or digital documents."
+        linkText2="Start using Document Verification"
+        href2="/all-products/document-verification"
+        heading3="Strengthen compliance and security with AML solutions"
+        paragraph3="Deploy end-to-end KYC and AML tools to screen users against global PEP and sanctions watchlists. Dojah’s AML watchlist coverage is updated in real-time, to help your business assess the potential AML risk exposure of your customers."
+        linkText3="Start using AML Check"
+        href3="/all-products/aml-check"
+        heading4="Check IP address and identify devices from anywhere in the world"
+        paragraph4="Our IP Address Lookup tool will show you the city, state, zip code, country, ISP, and time zone of any IP. This would inform business decisions for each risk level."
+        linkText4="Start using IP & Device Check"
+        href4="/all-products/ip-device-check"
+      />
       <CustomFlows />
       <div className="bg-[#ECF3FF] py-28">
         <CustomerStories />

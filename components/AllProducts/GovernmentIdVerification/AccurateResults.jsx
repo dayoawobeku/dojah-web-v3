@@ -17,7 +17,7 @@ export default function AccurateResults() {
             </div>
             <div className="h-full px-8 md:px-4 lg:px-8 bg-white rounded-lg pb-6 pt-[52px]">
               <h5 className="font-bold text-secondary text-2md">
-                Accurate results obtained in real time
+                Fast onboarding with minimal drop-offs
               </h5>
             </div>
           </div>

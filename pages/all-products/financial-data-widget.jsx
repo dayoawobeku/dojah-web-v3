@@ -7,6 +7,7 @@ import Video from '../../components/Video';
 import Hyperlink from '../../components/Hyperlink';
 import Verification from '../../components/Verification';
 import WhiteCards from '../../components/WhiteCards';
+import {financialDataHero} from '../../assets/images/images';
 
 export default function IdVerificationWidget() {
   return (
@@ -17,21 +18,22 @@ export default function IdVerificationWidget() {
       </Head>
 
       <Hero
-        heading="Simplified access to full-stack financial data with one integration"
+        heading="Access full-stack financial data with one integration"
         paragraph="Explore a one-stop shop for your financial data needs with tailored experiences and tools for your business."
+        illustration={financialDataHero}
       />
       <AddressData
-        text1="Reduce drop-off during checkout and other processes"
-        text2="Get detailed financial analysis to help you build better products"
-        text3="Speed up your approval process by accessing data in seconds"
+        text1="Reduce drop-off rate at checkout"
+        text2="Build better products with financial data"
+        text3="Access user-permitted bank data in seconds"
       />
       <SmoothOnboarding
         label
         heading="Access users’ financial data with a few lines of code"
         text1="Embed our widget into your mobile app, website, or add it to your payment interface via the Dojah dashboard."
         text2="Users connect their financial accounts to your platform via the widget interface in seconds"
-        text3="Connect instantly to major banks and retrieve permissioned data from a broad set of financial institutions."
-        text4="Start authenticating financial data, optimise your payments and product experiences through our pre-built flow"
+        text3="Connect to major banks and retrieve permitted data from a broad set of financial institutions."
+        text4="Start authenticating financial data, optimising payments and product experiences with pre-built flows"
       />
       <section className="bg-[#ECF3FF] py-20">
         <h4 className="max-w-xl mx-auto mb-16 text-lg font-bold text-center text-secondary">
@@ -47,9 +49,8 @@ export default function IdVerificationWidget() {
             paragraph="Allows your users be at ease by adjusting the widget to match your brand’s look and feel"
           />
           <WhiteCards
-            heading="Optimal support"
-            paragraph="Hands on deck to assist you when there is a need via our dedicated support channels.
-"
+            heading="Instant Authentication"
+            paragraph="Automate decision-making and eliminate the need for manual authentication."
           />
         </div>
       </section>

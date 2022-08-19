@@ -2,18 +2,15 @@ import Head from 'next/head';
 import Hero from '../../components/Hero';
 import Pricing from '../../components/Pricing';
 import CardsPartners from '../../components/AllProducts/CardsPartners';
-import {
-  ai,
-  clock,
-  documentVerificationIllustration,
-  stopwatch,
-} from '../../assets/images/images';
+import {ai, clock, stopwatch} from '../../assets/images/images';
 import NextLevelProof from '../../components/AllProducts/NextLevelProof';
-import VerifyDocument from '../../components/AllProducts/DocumentVerification/VerifyDocument';
-import SupportedIds from '../../components/AllProducts/DocumentVerification/SupportedIds';
 import Layout from '../../components/Layout';
+import BusinessSafe from '../../components/AllProducts/AddressVerification/BusinessSafe';
+import WhiteCards from '../../components/WhiteCards';
 
 export default function AmlCheck() {
+  const signupUrl = process.env.NEXT_PUBLIC_APP_SIGNUP;
+
   return (
     <Layout>
       <Head>
@@ -22,20 +19,52 @@ export default function AmlCheck() {
       </Head>
 
       <Hero
-        heading="Authenticate documents across countries."
-        paragraph="Capture, extract and screen information on several ID document types within Africa in seconds"
-        illustration={documentVerificationIllustration}
+        heading="Automate customer due diligence with global AML watchlists"
+        paragraph="Leverage real-time global anti-money-laundering data to mitigate business risks and meet regulatory obligations"
       />
       <CardsPartners
         image1={stopwatch}
         image2={clock}
         image3={ai}
-        text1="Optimize conversion rates. Verify users within 30-60 seconds."
-        text2="Save time and operational costs. Automate data extraction."
-        text3="AI-powered verification results for prevention of identity fraud"
+        text1="Go global with customer verification"
+        text2="Reduce operational costs and risk exposure"
+        text3="Automate AML screening processes"
       />
-      <VerifyDocument />
-      <SupportedIds />
+      <BusinessSafe
+        hyperlink
+        externalUrl={signupUrl}
+        hyperlink1="Get started"
+        hyperlink2="Get started"
+        largeText1="AML Check"
+        paragraph1="Prevent fraudsters from your platform by screening via PEP, OFAC, AML, Sanction and Adverse media across 200+ countries and 42800+ databases"
+        largeText2="Continuous Risk Monitoring"
+        paragraph2="Maintain an updated risk status of your clients with scheduled and real-time AML screening against a frequently updated database."
+      />
+
+      <section className="bg-[#ECF3FF] py-20 px-4">
+        <div className="max-w-[1137px] mx-auto">
+          <span className="mb-2 text-xs font-medium text-primary">
+            HOW IT WORKS
+          </span>
+          <h4 className="max-w-[707px] mb-10 text-xl font-bold text-secondary">
+            Conduct high-level due diligence and screen out bad actors
+          </h4>
+          <div className="grid grid-cols-3 gap-6 item-center">
+            <WhiteCards
+              heading="Capture Verified Identity"
+              paragraph="Automatically capture and verify users’ identifiable information (First name, last name, and date of birth) in real-time."
+            />
+            <WhiteCards
+              heading="Screen Against AML Lists"
+              paragraph="The collected data is mapped against global PEP, OFAC, AML, Sanction and Adverse media watchlists to flag high-risk identities."
+            />
+            <WhiteCards
+              heading="Adopt Real-time Tracking"
+              paragraph="The user is continuously monitored in case of a change in status and you get feedback in real-time."
+            />
+          </div>
+        </div>
+      </section>
       <NextLevelProof />
       <Pricing />
     </Layout>

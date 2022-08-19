@@ -3,18 +3,27 @@ import Image from 'next/image';
 import {predictiveText} from '../../../assets/images/images';
 import Hyperlink from '../../Hyperlink';
 
-export default function BusinessSafe() {
+export default function BusinessSafe({
+  heading,
+  largeText1,
+  paragraph1,
+  paragraph2,
+  largeText2,
+  hyperlink,
+  hyperlink1,
+  hyperlink2,
+  externalUrl,
+}) {
   const [active, setActive] = useState(0);
 
   return (
     <section className="py-24 bg-secondary">
       <div className="flex items-center justify-center md:justify-between flex-wrap md:flex-nowrap gap-5 max-w-[1195px] mx-auto px-4">
         <div className="max-w-xl">
-          <h4 className="text-xl font-bold text-white">
-            Keep your business safe and operational costs down
-          </h4>
-
-          <div className="relative mt-10 before:bg-secondary-500 before:absolute before:block before:rounded-lg before:w-1 before:h-full before:-left-1 before:transition-all">
+          {heading ? (
+            <h4 className="mb-10 text-xl font-bold text-white">{heading}</h4>
+          ) : null}
+          <div className="relative before:bg-secondary-500 before:absolute before:block before:rounded-lg before:w-1 before:h-full before:-left-1 before:transition-all">
             <div
               onClick={() => setActive(0)}
               tabIndex={0}
@@ -28,22 +37,25 @@ export default function BusinessSafe() {
                   active === 0 ? 'text-white' : 'text-secondary-200'
                 } font-bold text-3md leading-10 transition-all duration-300 ease-in-out`}
               >
-                Predictive text and auto-complete technology
+                {largeText1}
               </p>
               <p
                 className={`${
                   active === 0 ? 'text-secondary-100' : 'text-[#B3B3B660]'
-                } text-base my-4 transition-all duration-300 ease-in-out`}
+                } text-base mt-4 transition-all duration-300 ease-in-out`}
               >
-                Removes friction from the form-filling experience by
-                automatically suggesting possible address matches as your
-                customer types—increasing the likelihood of completion.
+                {paragraph1}
               </p>
-              <Hyperlink
-                variant={active === 0 ? 'primary' : 'disabled'}
-                text="View API document"
-                arrow
-              />
+              {hyperlink ? (
+                <div className="mt-4">
+                  <Hyperlink
+                    externalUrl={externalUrl}
+                    variant={active === 0 ? 'primary' : 'disabled'}
+                    text={hyperlink1 ?? 'View API document'}
+                    arrow
+                  />
+                </div>
+              ) : null}
             </div>
             <div
               onClick={() => setActive(1)}
@@ -58,23 +70,25 @@ export default function BusinessSafe() {
                   active === 1 ? 'text-white' : 'text-secondary-200'
                 } font-bold text-3md leading-10 transition-all duration-300 ease-in-out`}
               >
-                A smart address validation system
+                {largeText2}
               </p>
               <p
                 className={`${
                   active === 1 ? 'text-secondary-100' : 'text-[#B3B3B660]'
-                } text-base my-4 transition-all duration-300 ease-in-out`}
+                } text-base mt-4 transition-all duration-300 ease-in-out`}
               >
-                Our smart verification technology automatically checks that the
-                customer is within range of the captured address and triggers a
-                percentage score indicating the accuracy of the address match
-                per time.
+                {paragraph2}
               </p>
-              <Hyperlink
-                variant={active === 1 ? 'primary' : 'disabled'}
-                text="View API document"
-                arrow
-              />
+              {hyperlink ? (
+                <div className="mt-4">
+                  <Hyperlink
+                    externalUrl={externalUrl}
+                    variant={active === 1 ? 'primary' : 'disabled'}
+                    text={hyperlink2 ?? 'View API document'}
+                    arrow
+                  />
+                </div>
+              ) : null}
             </div>
           </div>
         </div>

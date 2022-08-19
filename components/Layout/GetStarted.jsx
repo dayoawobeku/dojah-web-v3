@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import Hyperlink from '../Hyperlink';
 
 export default function GetStarted() {
@@ -10,10 +11,15 @@ export default function GetStarted() {
         </h2>
         <p className="text-base text-center text-secondary-100 max-w-[815px]">
           Explore the{' '}
-          <span className="font-bold">Identity Verification Widget</span> or
-          create a Dojah account now and start verifying identity documents. You
-          can also <span className="font-bold">contact us</span> to build custom
-          identity APIs for your business.
+          <Link href="/all-products/id-verification-widget">
+            <a className="font-bold">Identity Verification Widget</a>
+          </Link>{' '}
+          or create a Dojah account now and start verifying identity documents.
+          You can also{' '}
+          <a href="https:dojah.io" className="font-bold">
+            contact us
+          </a>{' '}
+          to build custom identity APIs for your business.
         </p>
         <div className="flex items-center gap-4 sm:gap-6 whitespace-nowrap">
           <Hyperlink

@@ -28,7 +28,15 @@ export default function EasyLookup() {
         text2="Handle customer data without the cost of hiring developers"
         text3="Access to several databases across multiple countries in no-time"
       />
-      <IdentifyCustomers />
+      <IdentifyCustomers
+        heading="Identify customers across multiple ID databases in real time."
+        largeText1="1."
+        paragraph1="Select one or more means of user identification—BVN, NIN, NUBAN, KRA PIN, etc—across multiple countries"
+        largeText2="2."
+        paragraph2="Import user data in bulk with a CSV file or input data with the provided template on the dashboard."
+        largeText3="3."
+        paragraph3="Access the identity information of your users at any time, filter and download user data in bulk when needed."
+      />
       <Uploads
         src1={simpleTools}
         heading1="Individual/Bulk uploads"

@@ -2,18 +2,24 @@ import {useState} from 'react';
 import Image from 'next/image';
 import {codeImg} from '../../../assets/images/images';
 
-export default function IdentifyCustomers() {
+export default function IdentifyCustomers({
+  heading,
+  largeText1,
+  largeText2,
+  largeText3,
+  paragraph1,
+  paragraph2,
+  paragraph3,
+}) {
   const [active, setActive] = useState(0);
 
   return (
-    <section className="bg-secondary py-24">
-      <div className="flex items-start md:justify-between justify-center flex-wrap md:flex-nowrap gap-16 max-w-[1195px] mx-auto px-4">
-        <div className="max-w-[553px]">
-          <h4 className="text-white font-bold text-3md leading-10">
-            Identify customers across multiple IDs in real time.
-          </h4>
+    <section className="py-24 bg-secondary">
+      <div className="flex items-end md:justify-between justify-center flex-wrap md:flex-nowrap gap-16 max-w-[1195px] mx-auto px-4">
+        <div className="max-w-[669px]">
+          <h4 className="text-xl font-bold text-white">{heading}</h4>
 
-          <div className="mt-10 before:bg-secondary-500 before:absolute before:block before:rounded-lg before:w-1 before:h-full before:-left-1 before:transition-all relative">
+          <div className="relative mt-10 before:bg-secondary-500 before:absolute before:block before:rounded-lg before:w-1 before:h-full before:-left-1 before:transition-all">
             <div
               onClick={() => setActive(0)}
               tabIndex={0}
@@ -27,15 +33,14 @@ export default function IdentifyCustomers() {
                   active === 0 ? 'text-white' : 'text-secondary-200'
                 } font-bold text-3md leading-10 transition-all duration-300 ease-in-out`}
               >
-                1.
+                {largeText1}
               </p>
               <p
                 className={`${
                   active === 0 ? 'text-secondary-100' : 'text-[#B3B3B660]'
                 } text-base my-2 transition-all duration-300 ease-in-out`}
               >
-                Select one or more means of user identification—BVN, NIN, NUBAN,
-                KRA PIN, etc—across multiple countries
+                {paragraph1}
               </p>
             </div>
             <div
@@ -51,15 +56,14 @@ export default function IdentifyCustomers() {
                   active === 1 ? 'text-white' : 'text-secondary-200'
                 } font-bold text-3md leading-10 transition-all duration-300 ease-in-out`}
               >
-                2.
+                {largeText2}
               </p>
               <p
                 className={`${
                   active === 1 ? 'text-secondary-100' : 'text-[#B3B3B660]'
                 } text-base my-2 transition-all duration-300 ease-in-out`}
               >
-                Import user data in bulk with a CSV file or input data with the
-                provided template on the dashboard.
+                {paragraph2}
               </p>
             </div>
             <div
@@ -75,15 +79,14 @@ export default function IdentifyCustomers() {
                   active === 2 ? 'text-white' : 'text-secondary-200'
                 } font-bold text-3md leading-10 transition-all duration-300 ease-in-out`}
               >
-                3.
+                {largeText3}
               </p>
               <p
                 className={`${
                   active === 2 ? 'text-secondary-100' : 'text-[#B3B3B660]'
                 } text-base my-2 transition-all duration-300 ease-in-out`}
               >
-                Access the identity information of your users at any time,
-                filter and download user data in bulk when needed.
+                {paragraph3}
               </p>
             </div>
           </div>

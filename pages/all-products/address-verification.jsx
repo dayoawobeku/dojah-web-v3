@@ -27,7 +27,13 @@ export default function AddressVerification() {
         text2="Eliminate the risk and cost of manual address verification."
         text3="Help your users complete the address capture form with speed"
       />
-      <BusinessSafe />
+      <BusinessSafe
+        heading="Keep your business safe and operational costs down"
+        largeText1="Predictive text and auto-complete technology"
+        paragraph1="Removes friction from the form-filling experience by automatically suggesting possible address matches as your customer types—increasing the likelihood of completion."
+        largeText2="A smart address validation system"
+        paragraph2="Our smart verification technology automatically checks that the customer is within range of the captured address and triggers a percentage score indicating the accuracy of the address match per time."
+      />
       <EfficientOperations />
       <ComprehensiveData />
       <SoftJob />

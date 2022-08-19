@@ -18,8 +18,18 @@ export default function GovernmentIdVerification() {
       </Head>
 
       <Hero
-        heading="Validate Individuals & Businesses across Nigeria in seconds"
-        paragraph="Dojah lets you secure your business by verifying your users’ submitted data match government-issued IDs across Africa."
+        heading="Seamlessly validate government data for"
+        animatedText={
+          <div className="flex gap-3">
+            <p>users in</p>
+            <div className="relative inline-block overflow-hidden text down h-14 md:h-18 w-72">
+              <p className="text-white">Nigeria</p>
+              <p className="text-white">Ghana</p>
+              <p className="text-white">Kenya</p>
+            </div>
+          </div>
+        }
+        paragraph="Ensure compliance in any African country by verifying that the data provided by users match government-issued IDs."
         illustration={governmentIdIllustration}
       />
       <AccurateResults />

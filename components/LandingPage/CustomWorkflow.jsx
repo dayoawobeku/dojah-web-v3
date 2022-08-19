@@ -66,35 +66,51 @@ function Carousel({maxcount = 3}) {
 function Tabs({step}) {
   if (step === 1) {
     return (
-      <video width={1178} loop playsInline muted autoPlay src="/onboarding.mp4">
-        Your browser does not support the HTML5 Video element.
-      </video>
+      <div className="w-full max-w-[1178px] lg:h-[578px]">
+        <video
+          width={1178}
+          height={578}
+          loop
+          playsInline
+          muted
+          autoPlay
+          src="/onboarding.mp4"
+        >
+          Your browser does not support the HTML5 Video element.
+        </video>
+      </div>
     );
   } else if (step === 2) {
     return (
-      <video
-        width={1178}
-        loop
-        playsInline
-        muted
-        autoPlay
-        src="/business-verification.mp4"
-      >
-        Your browser does not support the HTML5 Video element.
-      </video>
+      <div className="w-full max-w-[1178px] lg:h-[578px]">
+        <video
+          width={1178}
+          height={578}
+          loop
+          playsInline
+          muted
+          autoPlay
+          src="/business-verification.mp4"
+        >
+          Your browser does not support the HTML5 Video element.
+        </video>
+      </div>
     );
   } else if (step === 3) {
     return (
-      <video
-        width={1178}
-        loop
-        playsInline
-        muted
-        autoPlay
-        src="/fraud-detection.mp4"
-      >
-        Your browser does not support the HTML5 Video element.
-      </video>
+      <div className="w-full max-w-[1178px] lg:h-[578px]">
+        <video
+          width={1178}
+          height={578}
+          loop
+          playsInline
+          muted
+          autoPlay
+          src="/fraud-detection.mp4"
+        >
+          Your browser does not support the HTML5 Video element.
+        </video>
+      </div>
     );
   }
 

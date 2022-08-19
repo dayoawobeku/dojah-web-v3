@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import {retailHero} from '../assets/images/images';
+import {geolocationHero} from '../assets/images/images';
 import AddressData from '../components/AllProducts/AddressData';
 import BusinessSafe from '../components/AllProducts/AddressVerification/BusinessSafe';
 import ComprehensiveData from '../components/AllProducts/AddressVerification/ComprehensiveData';
@@ -19,14 +19,14 @@ export default function Geolocation() {
       <Hero
         heading="Simplify fraud prevention with a comprehensive device and address data"
         paragraph="Digitally capture and verify customer’s address within seconds in xyz+ countries and locations."
-        illustration={retailHero}
+        illustration={geolocationHero}
       />
       <AddressData
         text1="Detect malicious attempts before it becomes fraud."
         text2="Eliminate the time spent manually correcting address errors."
         text3="AI-powered verification results in a 99% accuracy rate for the prevention of identity fraud"
       />
-      <BusinessSafe />
+      <BusinessSafe heading="Keep your business safe and operational costs down" />
       <EfficientOperations />
       <ComprehensiveData />
       <SoftJob />

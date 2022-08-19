@@ -8,7 +8,24 @@ import {
   stopwatchBlue,
 } from '../../assets/images/images';
 
-export default function SuspiciousSignups() {
+export default function SuspiciousSignups({
+  heading1,
+  paragraph1,
+  heading2,
+  paragraph2,
+  heading3,
+  paragraph3,
+  heading4,
+  paragraph4,
+  href1 = '',
+  linkText1,
+  href2 = '',
+  linkText2,
+  href3 = '',
+  linkText3,
+  href4 = '',
+  linkText4,
+}) {
   const ref = useRef(null);
   const scroll = scrollOffset => {
     ref.current.scrollLeft += scrollOffset;
@@ -39,80 +56,44 @@ export default function SuspiciousSignups() {
         >
           <div className="flex flex-col items-start gap-[22px] py-8 px-10 bg-white rounded-lg w-[363px] snap-start">
             <Image src={stopwatchBlue} alt="" width={56} height={56} />
-            <h5 className="font-bold text-secondary text-2md">
-              Protect against suspicious sign ups and impersonation
-            </h5>
-            <p className="text-base text-secondary">
-              Biometric verification with selfies, short videos and fingerprints
-              helps you automatically confirm that the genuine user is live and
-              the presented biometrics matches a valid ID. This way, you’re able
-              to spot fraudsters at the gate before they gain entry to your
-              platform or impersonate an unsuspecting user.
-            </p>
-            <Link href="/">
+            <h5 className="font-bold text-secondary text-2md">{heading1}</h5>
+            <p className="text-base text-secondary">{paragraph1}</p>
+            <Link href={href1}>
               <a className="flex items-center gap-2 mt-4 w-fit">
-                <span className="-mb-1 text-primary">
-                  Start using biometric verification
-                </span>
+                <span className="-mb-1 text-primary">{linkText1}</span>
                 <Image src={rightArrowBlue} alt="" width={16} height={16} />
               </a>
             </Link>
           </div>
           <div className="flex flex-col items-start gap-[22px] py-8 px-10 bg-white rounded-lg w-[363px] snap-start">
             <Image src={stopwatchBlue} alt="" width={56} height={56} />
-            <h5 className="font-bold text-secondary text-2md">
-              Catch up to 98% of document and identity fraud attempts
-            </h5>
-            <p className="text-base text-secondary">
-              Dojah’s global identity verification, covers over 3,000 document
-              types from 150+ countries. Our Document Verification APIs, widgets
-              and no-code tools help you automatically spot forgeries and
-              counterfeits on physical or digital documents.
-            </p>
-            <Link href="/">
+            <h5 className="font-bold text-secondary text-2md">{heading2}</h5>
+            <p className="text-base text-secondary">{paragraph2}</p>
+            <Link href={href2}>
               <a className="flex items-center gap-2 mt-4 w-fit">
-                <span className="-mb-1 text-primary">
-                  Start using biometric verification
-                </span>
+                <span className="-mb-1 text-primary">{linkText2}</span>
                 <Image src={rightArrowBlue} alt="" width={16} height={16} />
               </a>
             </Link>
           </div>
           <div className="flex flex-col items-start gap-[22px] py-8 px-10 bg-white rounded-lg w-[363px] snap-start">
             <Image src={stopwatchBlue} alt="" width={56} height={56} />
-            <h5 className="font-bold text-secondary text-2md">
-              Strengthen compliance and security with AML solutions
-            </h5>
-            <p className="text-base text-secondary">
-              Deploy end-to-end KYC and AML tools to screen users against global
-              PEP and sanctions watchlists. Dojah’s AML watchlist coverage is
-              updated in real-time, to help your business assess the potential
-              AML risk exposure of your customers.
-            </p>
-            <Link href="/">
+            <h5 className="font-bold text-secondary text-2md">{heading3}</h5>
+            <p className="text-base text-secondary">{paragraph3}</p>
+            <Link href={href3}>
               <a className="flex items-center gap-2 mt-4 w-fit">
-                <span className="-mb-1 text-primary">
-                  Start using biometric verification
-                </span>
+                <span className="-mb-1 text-primary">{linkText3}</span>
                 <Image src={rightArrowBlue} alt="" width={16} height={16} />
               </a>
             </Link>
           </div>
           <div className="flex flex-col items-start gap-[22px] py-8 px-10 bg-white rounded-lg w-[363px] snap-start">
             <Image src={stopwatchBlue} alt="" width={56} height={56} />
-            <h5 className="font-bold text-secondary text-2md">
-              Check IP address and identify devices from anywhere in the world
-            </h5>
-            <p className="text-base text-secondary">
-              Our IP Address Lookup tool will show you the city, state, zip
-              code, country, ISP, and time zone of any IP. This would inform
-              business decisions for each risk level.
-            </p>
-            <Link href="/">
+            <h5 className="font-bold text-secondary text-2md">{heading4}</h5>
+            <p className="text-base text-secondary">{paragraph4}</p>
+            <Link href={href4}>
               <a className="flex items-center gap-2 mt-4 w-fit">
-                <span className="-mb-1 text-primary">
-                  Start using biometric verification
-                </span>
+                <span className="-mb-1 text-primary">{linkText4}</span>
                 <Image src={rightArrowBlue} alt="" width={16} height={16} />
               </a>
             </Link>

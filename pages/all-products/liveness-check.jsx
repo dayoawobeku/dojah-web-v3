@@ -2,16 +2,10 @@ import Head from 'next/head';
 import Hero from '../../components/Hero';
 import Pricing from '../../components/Pricing';
 import CardsPartners from '../../components/AllProducts/CardsPartners';
-import {
-  ai,
-  clock,
-  documentVerificationIllustration,
-  stopwatch,
-} from '../../assets/images/images';
+import {ai, clock, stopwatch} from '../../assets/images/images';
 import NextLevelProof from '../../components/AllProducts/NextLevelProof';
-import VerifyDocument from '../../components/AllProducts/DocumentVerification/VerifyDocument';
-import SupportedIds from '../../components/AllProducts/DocumentVerification/SupportedIds';
 import Layout from '../../components/Layout';
+import IdentifyCustomers from '../../components/AllProducts/EasyLookup/IdentifyCustomers';
 
 export default function LivenessCheck() {
   return (
@@ -22,20 +16,26 @@ export default function LivenessCheck() {
       </Head>
 
       <Hero
-        heading="Authenticate documents across countries."
-        paragraph="Capture, extract and screen information on several ID document types within Africa in seconds"
-        illustration={documentVerificationIllustration}
+        heading="Ensure identity documents are presented by their rightful owners."
+        paragraph="Leverage our human-friendly proof of liveness to authorize transactions, sign-ups and logins on your platform."
       />
       <CardsPartners
         image1={stopwatch}
         image2={clock}
         image3={ai}
-        text1="Optimize conversion rates. Verify users within 30-60 seconds."
-        text2="Save time and operational costs. Automate data extraction."
-        text3="AI-powered verification results for prevention of identity fraud"
+        text1="High-assurance biometric authentication"
+        text2="Reduce cases of duplicate or multiple accounts"
+        text3="Detect impersonation and identity spoofing"
       />
-      <VerifyDocument />
-      <SupportedIds />
+      <IdentifyCustomers
+        heading="Setup strong protection from impersonation and identity theft"
+        largeText1="AI-powered face recognition technology"
+        paragraph1="Dojah captures users’ facial biometrics from videos or selfies that are then continuously referenced for authorizing their actions (transactions, logins)."
+        largeText2="Verify real people in real-time"
+        paragraph2="Our AI-powered facial recognition technology analyses human expressions such as smiling and blinking for liveness detection."
+        largeText3="Stronger authentication"
+        paragraph3="Incorporate facial biometrics for user authentication by seamlessly matching users’ facial biometrics with their ID documents."
+      />
       <NextLevelProof />
       <Pricing />
     </Layout>

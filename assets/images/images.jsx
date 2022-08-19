@@ -106,6 +106,11 @@ export {default as logisticsHero} from './logistics-hero.svg';
 export {default as retailHero} from './retail-hero.svg';
 export {default as fraudPreventionHero} from './fraud-prevention-hero.svg';
 export {default as enableScale} from './enable-scale.svg';
+export {default as biometricVerificationHero} from './biometric-verification-hero.svg';
+export {default as idVerificationHero} from './id-verification-widget-hero.svg';
+export {default as financialDataHero} from './financial-data-widget-hero.svg';
+export {default as onboardingConfirmationHero} from './onboarding-and-confirmation-hero.svg';
+export {default as geolocationHero} from './geolocation-hero.svg';
 
 // PNGs
 export {default as greenHouseLogo} from './greenhouse-capital-logo.png';

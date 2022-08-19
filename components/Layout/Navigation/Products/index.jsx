@@ -119,7 +119,7 @@ const PRODUCTS5 = [
 export default function Products({dropdown = false}) {
   return (
     <div
-      className={`w-full bg-white cursor-default top-full ${
+      className={`w-full transition-all duration-300 bg-white cursor-default top-full ${
         dropdown ? 'products-dropdown-menu absolute left-0 z-10 p-20' : ''
       }`}
     >

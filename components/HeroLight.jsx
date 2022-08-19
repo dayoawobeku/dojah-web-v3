@@ -7,7 +7,7 @@ export default function HeroLight({heading, paragraph, illustration}) {
 
   return (
     <main
-      className={`bg-[url('../assets/images/hero-art-mobile.svg')] sm:bg-[url('../assets/images/hero-light-art.svg')] bg-no-repeat bg-primary-100`}
+      className={`bg-[url('../assets/images/hero-art-mobile.svg')] sm:bg-[url('../assets/images/hero-light-art.svg')] bg-no-repeat bg-primary-100 bg-contain`}
       id="maincontent"
       tabIndex={-1}
     >

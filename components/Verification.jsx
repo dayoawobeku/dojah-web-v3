@@ -22,7 +22,7 @@ export default function Verification({
         </p>
         <p className="text-secondary-150 text-base max-w-[266px]">
           {paragraph1 ??
-            'Ensure your users are truly who they say they are with facial biometrics'}
+            'Ensure users are who they say they are by matching their facial biometrics with a valid ID'}
         </p>
         <Link href="/">
           <a className="flex items-center gap-2 w-fit">

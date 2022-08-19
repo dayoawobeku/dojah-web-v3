@@ -6,6 +6,7 @@ import SmoothOnboarding from '../../components/AllProducts/EasyOnboard/SmoothOnb
 import Video from '../../components/Video';
 import Hyperlink from '../../components/Hyperlink';
 import Verification from '../../components/Verification';
+import {idVerificationHero} from '../../assets/images/images';
 
 export default function IdVerificationWidget() {
   return (
@@ -17,18 +18,19 @@ export default function IdVerificationWidget() {
 
       <Hero
         heading="Verify and onboard users fast with less engineering work"
-        paragraph="Dojah Identity Verification Widget allows you to automatically analyse a wide range of identity documents, detect fraud and sign up real users fast."
+        paragraph="Our ID Verification Widget allows you to automatically analyse a wide range of identity documents, detect fraud and sign up real users fast."
+        illustration={idVerificationHero}
       />
       <AddressData
-        text1="Focus on product development and growth, with easy onboarding."
-        text2="Handle customer data without the cost of hiring developers"
-        text3="Access to several databases across multiple countries in no-time"
+        text1="Automate your onboarding and cut drop-off rates"
+        text2="Build custom onboarding flows with low-code"
+        text3="Access identity databases across multiple countries"
       />
       <SmoothOnboarding
         label
         heading="How Dojah helps you reduce drop-off rates and onboard trusted users in a minute"
         text1="Automatically lookup and extract all user data as soon as the applicant uploads a valid ID document."
-        text2="Allow user to validate ownership of the provided ID document via biometrics, phone number or email verification."
+        text2="Allow user to validate ownership of the provided ID document via biometrics, phone number or email."
         text3="Screen user biometric or contact information against the ID database across Africa’s major economies."
         text4="Displays a new entry on your Dojah dashboard to manually or automatically verify users."
       />
@@ -46,20 +48,20 @@ export default function IdVerificationWidget() {
       </section>
       <section className="py-24 bg-white-800">
         <div className="max-w-[1051px] mx-auto mb-20">
-          <h3 className="max-w-3xl mx-auto font-bold text-center text-secondary text-2lg">
+          <h3 className="max-w-xl mx-auto font-bold text-center text-secondary text-2lg">
             A complete stack of identity verification tools
           </h3>
         </div>
         <Verification
-          paragraph2="Automatically check and verify driver's license and other KYC documents."
+          paragraph2="Automate KYC check and verification across multiple government database."
           heading3="Document Verification"
-          paragraph3="Spot forgery, extract and verify data from vehicle documents accurately"
+          paragraph3="Spot forgery, extract and verify accurate data from all document types."
           explore
         />
         <div className="mt-20" />
         <Verification
           heading1="Address Verification"
-          paragraph1="Automatically capture and validate the physical location of your recipients."
+          paragraph1="Automatically capture and validate the physical location of your recipients in real-time."
           heading2="Authentication & Checks"
           paragraph2="Carry out AML, IP & Device, Phone Number, Email and Liveness checks for users."
         />

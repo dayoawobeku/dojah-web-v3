@@ -1,17 +1,12 @@
 import Head from 'next/head';
 import Hero from '../../components/Hero';
-import Pricing from '../../components/Pricing';
 import CardsPartners from '../../components/AllProducts/CardsPartners';
-import {
-  ai,
-  clock,
-  documentVerificationIllustration,
-  stopwatch,
-} from '../../assets/images/images';
-import NextLevelProof from '../../components/AllProducts/NextLevelProof';
-import VerifyDocument from '../../components/AllProducts/DocumentVerification/VerifyDocument';
-import SupportedIds from '../../components/AllProducts/DocumentVerification/SupportedIds';
+import {biometricVerificationHero, stopwatch} from '../../assets/images/images';
 import Layout from '../../components/Layout';
+import SoftJob from '../../components/AllProducts/SoftJob';
+import VerificationService from '../../components/VerificationService';
+import BusinessSafe from '../../components/AllProducts/AddressVerification/BusinessSafe';
+import FraudProof from '../../components/FraudProof';
 
 export default function BiometricVerification() {
   return (
@@ -22,22 +17,27 @@ export default function BiometricVerification() {
       </Head>
 
       <Hero
-        heading="Authenticate documents across countries."
-        paragraph="Capture, extract and screen information on several ID document types within Africa in seconds"
-        illustration={documentVerificationIllustration}
+        heading="Confirm user identity with facial biometrics"
+        paragraph="Verify users with a short video or selfie. Dojah checks that the user is live and their facial biometrics matches a valid ID."
+        illustration={biometricVerificationHero}
       />
       <CardsPartners
         image1={stopwatch}
-        image2={clock}
-        image3={ai}
-        text1="Optimize conversion rates. Verify users within 30-60 seconds."
-        text2="Save time and operational costs. Automate data extraction."
-        text3="AI-powered verification results for prevention of identity fraud"
+        image2={stopwatch}
+        image3={stopwatch}
+        text1="Onboard users with a biometric verification"
+        text2="An added layer of protection for your users"
+        text3="Make verification seamless with biometrics"
       />
-      <VerifyDocument />
-      <SupportedIds />
-      <NextLevelProof />
-      <Pricing />
+      <VerificationService />
+      <BusinessSafe
+        largeText1="Production-ready integration"
+        paragraph1="Dojah provides flexible integration options and libraries that help you deploy identity verification at scale without compromising on your onboarding experience."
+        largeText2="Enrol once, get robust data"
+        paragraph2="One-time integration allows you to verify all types of KYC documents across African countries in seconds through Dojah’s robust identity lookup service."
+      />
+      <FraudProof />
+      <SoftJob />
     </Layout>
   );
 }
