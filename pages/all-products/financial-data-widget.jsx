@@ -7,7 +7,10 @@ import Video from '../../components/Video';
 import Hyperlink from '../../components/Hyperlink';
 import Verification from '../../components/Verification';
 import WhiteCards from '../../components/WhiteCards';
-import {financialDataHero} from '../../assets/images/images';
+import {
+  financialDataHero,
+  financialDataWidgetThumbnail,
+} from '../../assets/images/images';
 
 export default function IdVerificationWidget() {
   return (
@@ -55,7 +58,11 @@ export default function IdVerificationWidget() {
         </div>
       </section>
       <section className="relative flex flex-col items-center justify-center mx-auto bg-primary-100 py-30">
-        <Video />
+        <Video
+          src="https://www.youtube.com/embed/gqkyU-2Xt_g"
+          thumbnail={financialDataWidgetThumbnail}
+          title="Linking account"
+        />
         <div>
           <h4 className="mt-12 text-lg font-bold text-secondary-300">
             See how it works in detail

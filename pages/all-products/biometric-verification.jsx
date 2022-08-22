@@ -17,7 +17,12 @@ export default function BiometricVerification() {
       </Head>
 
       <Hero
-        heading="Confirm user identity with facial biometrics"
+        heading={
+          <>
+            Confirm user identity with {''}
+            <span>facial biometrics</span>
+          </>
+        }
         paragraph="Verify users with a short video or selfie. Dojah checks that the user is live and their facial biometrics matches a valid ID."
         illustration={biometricVerificationHero}
       />

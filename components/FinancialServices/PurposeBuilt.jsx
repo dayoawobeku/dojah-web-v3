@@ -66,32 +66,32 @@ function Carousel({maxcount = 3}) {
 
 function Tabs({step}) {
   if (step === 1) {
-    return <Verification />;
+    return (
+      <Verification
+        paragraph1="Ensure your users are truly present with facial biometrics (selfies, videos) or fingerprints."
+        heading3="Address verification"
+        paragraph3="Automatically capture and validate the physical location of your users."
+      />
+    );
   } else if (step === 2) {
     return (
-      <video
-        width={1240}
-        loop
-        playsInline
-        muted
-        autoPlay
-        src="/business-verification-gif.mp4"
-      >
-        Your browser does not support the HTML5 Video element.
-      </video>
+      <Verification
+        heading1="AML Check"
+        paragraph1="Conduct high-level due diligence by screening users against global anti-money laundering standards."
+        heading2="Document Verification"
+        paragraph2="Spot forgery, extract and verify data from user documents fast."
+        heading3="IP & Device Check"
+        paragraph3="Check IP addresses and identify devices from anywhere in the world."
+      />
     );
   } else if (step === 3) {
     return (
-      <video
-        width={1240}
-        loop
-        playsInline
-        muted
-        autoPlay
-        src="/fraud-detection-gif.mp4"
-      >
-        Your browser does not support the HTML5 Video element.
-      </video>
+      <Verification
+        heading1="Financial Connections"
+        paragraph1="Get bank data such as account statements, balance, identity, and more with your users’ permission."
+        heading2="Financial Data Widget"
+        paragraph2="Analyze spending patterns and transactions to serve customers better and keep your business safe."
+      />
     );
   }
 
@@ -102,7 +102,7 @@ export default function PurposeBuilt() {
   const [step, setStep] = useState(1);
 
   return (
-    <section className="bg-white-800">
+    <section className="bg-white-800 hidden sm:block">
       <div className="flex flex-col items-start sm:items-center max-w-[1195px] mx-auto px-4 py-24">
         <h3 className="font-bold text-2lg text-secondary max-w-3xl text-center">
           Purpose-built for every stage of your customer journey
@@ -136,7 +136,7 @@ export default function PurposeBuilt() {
             onFocus={() => setStep(2)}
             onClick={() => setStep(2)}
           >
-            Business Verification
+            Fraud Prevention
           </button>
           <button
             className={`transition-all pt-[18px] pb-[14px] px-[40px] rounded-r border-b-2 border-secondary ${
@@ -145,7 +145,7 @@ export default function PurposeBuilt() {
             onFocus={() => setStep(3)}
             onClick={() => setStep(3)}
           >
-            Fraud detection
+            Financial Connections
           </button>
         </div>
 

@@ -25,7 +25,7 @@ export default function Logistics() {
         text3="Detect frauds and reduce risks with reliable and instant data"
       />
       <VerificationTime />
-      <section className="py-24 bg-white-800">
+      <section className="py-24 bg-white-800 px-4">
         <div className="max-w-[1051px] mx-auto mb-20">
           <h3 className="max-w-3xl mx-auto font-bold text-center text-secondary text-2lg">
             Onboard trusted drivers and make service delivery smooth for

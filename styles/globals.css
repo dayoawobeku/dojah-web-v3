@@ -74,7 +74,6 @@ html {
   .use-cases:hover .use-cases-dropdown-menu,
   .products:hover .products-dropdown-menu {
     display: block;
-    transition: all 0.3s ease-in-out;
   }
 
   .products:hover::after,
@@ -88,7 +87,6 @@ html {
     background-color: #3f7cdb;
     bottom: -6px;
     z-index: 1550;
-    transition: all 0.3s ease-in-out;
   }
 
   /* nav lis hover */

@@ -429,7 +429,11 @@ export default function Layout({children}) {
                 ©{new Date().getFullYear()} Dojah. All rights reserved
               </p>
               <div className="flex items-center gap-4">
-                <a href="https://twitter.com/DojahInc">
+                <a
+                  href="https://twitter.com/DojahInc"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <Image
                     src={twitter}
                     alt="twitter icon"
@@ -437,10 +441,14 @@ export default function Layout({children}) {
                     height={20}
                   />
                 </a>
-                <a href="https://join.slack.com/t/dojahinc/shared_invite/zt-ng9ch04k-bT5sVBnTY6Fa1ffQ0SAxpQ">
+                <a
+                  href="https://join.slack.com/t/dojahinc/shared_invite/zt-ng9ch04k-bT5sVBnTY6Fa1ffQ0SAxpQ"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <Image src={slack} alt="slack icon" width={20} height={20} />
                 </a>
-                <a href="">
+                <a href="" target="_blank" rel="noreferrer">
                   <Image
                     src={youtube}
                     alt="youtube icon"
@@ -448,7 +456,11 @@ export default function Layout({children}) {
                     height={20}
                   />
                 </a>
-                <a href="https://www.linkedin.com/company/dojah/mycompany">
+                <a
+                  href="https://www.linkedin.com/company/dojah/mycompany"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <Image
                     src={linkedin}
                     alt="linkedin icon"
@@ -456,7 +468,7 @@ export default function Layout({children}) {
                     height={20}
                   />
                 </a>
-                <a href="">
+                <a href="" target="_blank" rel="noreferrer">
                   <Image
                     src={facebook}
                     alt="facebook icon"

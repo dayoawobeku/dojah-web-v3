@@ -13,6 +13,7 @@ export default function BusinessSafe({
   hyperlink1,
   hyperlink2,
   externalUrl,
+  headingSize,
 }) {
   const [active, setActive] = useState(0);
 
@@ -21,7 +22,13 @@ export default function BusinessSafe({
       <div className="flex items-center justify-center md:justify-between flex-wrap md:flex-nowrap gap-5 max-w-[1195px] mx-auto px-4">
         <div className="max-w-xl">
           {heading ? (
-            <h4 className="mb-10 text-xl font-bold text-white">{heading}</h4>
+            <h4
+              className={`mb-10 ${
+                headingSize ?? 'text-xl'
+              } font-bold text-white`}
+            >
+              {heading}
+            </h4>
           ) : null}
           <div className="relative before:bg-secondary-500 before:absolute before:block before:rounded-lg before:w-1 before:h-full before:-left-1 before:transition-all">
             <div

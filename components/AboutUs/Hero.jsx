@@ -37,30 +37,27 @@ export default function Hero() {
         </div>
 
         <div className="translate-y-1/2 bg-white h-[136px] w-[102%] translate-x-0 rounded-[100%] z-50 -mt-[68px]" />
-        <div
-          className="relative inline-flex items-center w-full gap-10 overflow-x-auto"
-          style={{display: '-webkit-box'}}
-        >
+        <div className="grid items-stretch w-full grid-flow-col gap-10 overflow-x-auto snap-x overscroll-x-contain scroll-smooth">
           <div className="relative w-[350px] h-[408.61px]">
-            <Image alt="" src={aboutUs1} layout="fill" />
+            <Image alt="" src={aboutUs1} layout="fill" priority />
           </div>
           <div className="relative w-[350px] h-[408.61px]">
-            <Image alt="" src={aboutUs2} layout="fill" />
+            <Image alt="" src={aboutUs2} layout="fill" priority />
           </div>
           <div className="relative w-[350px] h-[408.61px]">
-            <Image alt="" src={aboutUs3} layout="fill" />
+            <Image alt="" src={aboutUs3} layout="fill" priority />
           </div>
           <div className="relative w-[350px] h-[408.61px]">
-            <Image alt="" src={aboutUs4} layout="fill" />
+            <Image alt="" src={aboutUs4} layout="fill" priority />
           </div>
           <div className="relative w-[350px] h-[408.61px]">
-            <Image alt="" src={aboutUs5} layout="fill" />
+            <Image alt="" src={aboutUs5} layout="fill" priority />
           </div>
           <div className="relative w-[350px] h-[408.61px]">
-            <Image alt="" src={aboutUs6} layout="fill" />
+            <Image alt="" src={aboutUs6} layout="fill" priority />
           </div>
           <div className="relative w-[350px] h-[408.61px]">
-            <Image alt="" src={aboutUs7} layout="fill" />
+            <Image alt="" src={aboutUs7} layout="fill" priority />
           </div>
         </div>
         <div className="-translate-y-1/2 bg-white h-[136px] w-[102%] translate-x-0 rounded-[100%] -mb-[68px]" />

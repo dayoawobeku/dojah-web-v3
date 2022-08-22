@@ -6,13 +6,21 @@ import Faqs from './Faqs';
 
 const DEVELOPERS = [
   {
-    href: '/',
+    externalUrl: 'https://api-docs.dojah.io/docs',
     text: 'Documentation',
     icon: <Documentation />,
   },
-  {href: '/', text: 'API references', icon: <ApiReferences />},
-  {href: '/', text: 'API status', icon: <ApiStatus />},
-  {href: '/', text: 'FAQs', icon: <Faqs />},
+  {
+    externalUrl: 'https://api-docs.dojah.io/reference',
+    text: 'API references',
+    icon: <ApiReferences />,
+  },
+  {
+    externalUrl: 'https://status.dojah.io',
+    text: 'API status',
+    icon: <ApiStatus />,
+  },
+  {externalUrl: 'https://help.dojah.io/en', text: 'FAQs', icon: <Faqs />},
 ];
 export default function Developers({dropdown = false}) {
   return (
@@ -30,12 +38,11 @@ export default function Developers({dropdown = false}) {
             dropdown ? 'grid-cols-4' : 'grid-cols-1'
           } grid items-end gap-10 mt-6 place-items-start`}
         >
-          {DEVELOPERS.map(({href, externalUrl, text, icon}) => (
+          {DEVELOPERS.map(({externalUrl, text, icon}) => (
             <NavItem
               key={text}
               icon={icon}
               text={text}
-              href={href}
               externalUrl={externalUrl}
             />
           ))}

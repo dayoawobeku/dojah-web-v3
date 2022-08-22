@@ -18,10 +18,9 @@ export default function GovernmentIdVerification() {
       </Head>
 
       <Hero
-        heading="Seamlessly validate government data for"
+        heading="Seamlessly validate government data for users in"
         animatedText={
-          <div className="flex gap-3">
-            <p>users in</p>
+          <div className="md:flex flex-wrap gap-3">
             <div className="relative inline-block overflow-hidden text down h-14 md:h-18 w-72">
               <p className="text-white">Nigeria</p>
               <p className="text-white">Ghana</p>

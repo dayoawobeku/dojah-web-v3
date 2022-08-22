@@ -25,7 +25,7 @@ export default function RetailEcommerce() {
         text3="Detect frauds and reduce risks with reliable and instant data"
       />
       <VerificationTime />
-      <section className="py-24 bg-white-800">
+      <section className="py-24 bg-white-800 px-4">
         <div className="max-w-[1051px] mx-auto mb-20">
           <h3 className="max-w-3xl mx-auto font-bold text-center text-secondary text-2lg">
             Get rid of scammers, don’t delay ready-to-pay customers
@@ -37,7 +37,7 @@ export default function RetailEcommerce() {
           paragraph3="Spot forgery, extract and verify data from vehicle documents accurately"
           explore
         />
-        <div className="mt-20" />
+        <div className="mt-8 lg:mt-20" />
         <Verification
           heading1="Address Verification"
           paragraph1="Automatically capture and validate the physical location of your recipients."

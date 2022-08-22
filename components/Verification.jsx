@@ -12,15 +12,15 @@ export default function Verification({
   explore = false,
 }) {
   return (
-    <div className="flex items-center gap-21 justify-between max-w-[1051px] mx-auto">
-      <div className="flex flex-col gap-2 max-w-[289px]">
+    <div className="flex items-start flex-col lg:flex-row gap-8 xl:gap-21 lg:justify-between max-w-[1051px] mx-auto">
+      <div className="flex flex-col gap-2 lg:max-w-[289px]">
         <div className="relative w-10 h-10">
           <Image alt="" src={polygon} layout="fill" />
         </div>
         <p className="font-bold whitespace-nowrap text-3md text-secondary">
           {heading1 ?? 'Biometric Verification'}
         </p>
-        <p className="text-secondary-150 text-base max-w-[266px]">
+        <p className="text-secondary-150 text-base lg:max-w-[266px]">
           {paragraph1 ??
             'Ensure users are who they say they are by matching their facial biometrics with a valid ID'}
         </p>
@@ -35,14 +35,14 @@ export default function Verification({
           </a>
         </Link>
       </div>
-      <div className="flex flex-col gap-2 max-w-[289px]">
+      <div className="flex flex-col gap-2 lg:max-w-[289px]">
         <div className="relative w-10 h-10">
           <Image alt="" src={polygon} layout="fill" />
         </div>
         <p className="font-bold whitespace-nowrap text-3md text-secondary">
           {heading2 ?? 'Gov. ID Verification'}
         </p>
-        <p className="text-secondary-150 text-base max-w-[266px]">
+        <p className="text-secondary-150 text-base lg:max-w-[266px]">
           {paragraph2 ??
             'Automate KYC/KYB check to onboard users and businesses across Africa’s major economies.'}
         </p>
@@ -57,14 +57,14 @@ export default function Verification({
           </a>
         </Link>
       </div>
-      <div className="flex flex-col gap-2 w-[289px]">
+      <div className="flex flex-col gap-2 lg:w-[289px]">
         <div className="relative w-10 h-10">
           <Image alt="" src={heading3 ? polygon : ''} layout="fill" />
         </div>
         <p className="font-bold whitespace-nowrap text-3md text-secondary">
           {heading3 ? heading3 : ''}
         </p>
-        <p className="text-secondary-150 text-base max-w-[266px]">
+        <p className="text-secondary-150 text-base lg:max-w-[266px]">
           {paragraph3 ? paragraph3 : ''}
         </p>
         {heading3 ? (

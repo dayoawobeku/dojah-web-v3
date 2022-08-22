@@ -3,12 +3,19 @@ import {useState} from 'react';
 import {playIc, videoBg} from '../assets/images/images';
 import Modal from './Modal';
 
-export default function Video() {
+export default function Video({src, title, thumbnail}) {
   let [isOpen, setIsOpen] = useState(false);
 
   return (
     <div className="relative">
-      <Image alt="" src={videoBg} width={1192} height={575} />
+      <div className="relative w-[1192px] h-[575px]">
+        <Image
+          alt=""
+          src={thumbnail ?? videoBg}
+          layout="fill"
+          objectFit="cover"
+        />
+      </div>
       <div
         className="absolute w-[120.55px] h-[120.55px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 cursor-pointer"
         tabIndex={0}
@@ -19,7 +26,9 @@ export default function Video() {
         <Modal show={isOpen} isOpen={isOpen} setIsOpen={setIsOpen}>
           <iframe
             className="w-full h-full bg-black"
-            src="https://www.youtube.com/embed/tgbNymZ7vqY"
+            src={src ?? 'https://www.youtube.com/embed/tgbNymZ7vqY'}
+            allowFullScreen
+            title={title}
           ></iframe>
           <button
             onClick={() => setIsOpen(false)}

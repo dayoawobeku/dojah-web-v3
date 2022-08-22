@@ -5,13 +5,13 @@ import CardsPartners from '../../components/AllProducts/CardsPartners';
 import {
   ai,
   clock,
-  documentVerificationIllustration,
+  financialConnectionHero,
   stopwatch,
 } from '../../assets/images/images';
-import VerifyDocument from '../../components/AllProducts/DocumentVerification/VerifyDocument';
-import SupportedIds from '../../components/AllProducts/DocumentVerification/SupportedIds';
 import Layout from '../../components/Layout';
 import SoftJob from '../../components/AllProducts/SoftJob';
+import BusinessSafe from '../../components/AllProducts/AddressVerification/BusinessSafe';
+import SuspiciousSignups from '../../components/FraudDetection/SuspiciousSignups';
 
 export default function FinancialConnection() {
   return (
@@ -22,20 +22,69 @@ export default function FinancialConnection() {
       </Head>
 
       <Hero
-        heading="Access financial data. Verify financial reputation. Build better products."
-        paragraph="Capture, extract and screen information on several ID document types within Africa in seconds"
-        illustration={documentVerificationIllustration}
+        heading="Access and verify financial data, build better products"
+        paragraph="Get bank data such as account statements, balance, identity, spending patterns and more in seconds with your users’ permission."
+        illustration={financialConnectionHero}
       />
       <CardsPartners
         image1={stopwatch}
         image2={clock}
         image3={ai}
-        text1="Optimize conversion rates. Verify users within 30-60 seconds."
-        text2="Save time and operational costs. Automate data extraction."
-        text3="AI-powered verification results for prevention of identity fraud"
+        text1="Access user-permitted bank data in seconds"
+        text2="Verify account ownership and mitigate fraud"
+        text3="Build better products and user experience"
       />
-      <VerifyDocument />
-      <SupportedIds />
+      <BusinessSafe
+        headingSize="text-3md leading-10"
+        heading="A full stack of payment and financial tools on your platform or marketplace"
+        largeText1="Easy integration"
+        paragraph1="Embed our widget into your mobile app, website, or your payment interface via the Dojah dashboard. Receive payments, reduce fraud, assess risk, and build new products."
+        largeText2="Connect our expansive bank coverage"
+        paragraph2="Our endpoint helps you instantly retrieve and verify user-permitted data from accounts across major banks."
+      />
+      <SuspiciousSignups
+        noLink
+        title
+        heading1="Verify Bank Account Owner"
+        paragraph1="Reduce fraud by confirming bank account ownership information like full name, date of birth, phone number, address, BVN and more."
+        heading2="Check Account Balance"
+        paragraph2="Pull real-time account balance information to confirm your user has sufficient funds before initiating debits."
+        heading3="Retrieve Historical Transactions"
+        paragraph3="Obtain data about users’ cash flow, income, and spending habits to build financial management tools or offer financial services."
+        heading4="Retrieve Bank Statements"
+        paragraph4="Pull bank statement data from specific timeframes for up to 12 months to get insights into the spending habits of your users."
+      />
+      <section className="py-24 bg-white-800 px-4">
+        <div className="max-w-[1051px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-21">
+          <div>
+            <h4 className="text-3md leading-[35px] text-secondary font-bold">
+              Put customers in charge
+            </h4>
+            <p className="mt-2 text-base text-secondary-150 md:max-w-[266px]">
+              Allow users to decide the type of data to share including
+              transaction history, balance, account, and identity information.
+            </p>
+          </div>
+          <div>
+            <h4 className="text-3md leading-[35px] text-secondary font-bold">
+              Optimised for conversion
+            </h4>
+            <p className="mt-2 text-base text-secondary-150 md:max-w-[266px]">
+              Reduce drop-off during checkout and other processes by
+              streamlining account verification and data sharing.
+            </p>
+          </div>
+          <div>
+            <h4 className="text-3md leading-[35px] text-secondary font-bold">
+              End-to-end payment experience
+            </h4>
+            <p className="mt-2 text-base text-secondary-150 md:max-w-[266px]">
+              Spot forgery, extract and verify data from vehicle documents
+              accurately
+            </p>
+          </div>
+        </div>
+      </section>
       <SoftJob />
       <Pricing />
     </Layout>

@@ -12,7 +12,11 @@ export default function Kits() {
       </div>
 
       <div className="grid grid-cols-3 mt-16 gap-x-8 gap-y-16">
-        <a href="/sth">
+        <a
+          href="https://drive.google.com/drive/folders/1VrSsngrtyI5tc8dck0cJ5jt6NuDNFiJW?usp=sharing"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <Image alt="" src={brandKit} width={377} height={228} />
           <div className="flex items-center gap-2 mt-4">
             <p className="-mb-1 text-base underline underline-offset-2 text-secondary">
@@ -21,7 +25,11 @@ export default function Kits() {
             <Image alt="" src={hyperlinkPlain} />
           </div>
         </a>
-        <a href="/sth">
+        <a
+          href="https://drive.google.com/drive/folders/1loX6TSzVLDNNasacnuFxtc9w86Ndvjrf?usp=sharing"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <Image alt="" src={brandKit} width={377} height={228} />
           <div className="flex items-center gap-2 mt-4">
             <p className="-mb-1 text-base underline underline-offset-2 text-secondary">
@@ -30,20 +38,15 @@ export default function Kits() {
             <Image alt="" src={hyperlinkPlain} />
           </div>
         </a>
-        <a href="/sth">
+        <a
+          href="https://drive.google.com/drive/folders/16294NOd7K_19WEm4QJkPQj9H0IdS7ukP?usp=sharing"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <Image alt="" src={brandKit} width={377} height={228} />
           <div className="flex items-center gap-2 mt-4">
             <p className="-mb-1 text-base underline underline-offset-2 text-secondary">
               Dojah brand guideline
-            </p>
-            <Image alt="" src={hyperlinkPlain} />
-          </div>
-        </a>
-        <a href="/sth">
-          <Image alt="" src={brandKit} width={377} height={228} />
-          <div className="flex items-center gap-2 mt-4">
-            <p className="-mb-1 text-base underline underline-offset-2 text-secondary">
-              Dojah dashboard screenshots
             </p>
             <Image alt="" src={hyperlinkPlain} />
           </div>

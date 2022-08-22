@@ -1,16 +1,16 @@
 import {useState} from 'react';
 import Image from 'next/image';
-import {codeImg} from '../../../assets/images/images';
+import {easyConnectScreenshot} from '../../../assets/images/images';
 
 export default function FinancialData() {
   const [active, setActive] = useState(0);
 
   return (
     <section className="bg-secondary py-24">
-      <div className="flex items-start md:justify-between justify-center flex-wrap md:flex-nowrap gap-16 max-w-[1195px] mx-auto px-4">
+      <div className="flex items-center md:justify-between justify-center flex-wrap lg:flex-nowrap max-w-[1195px] mx-auto px-4">
         <div className="max-w-[553px]">
           <h4 className="text-white font-bold text-3md leading-10">
-            Create a smooth onboarding flow on your own terms
+            Make it easy for users to share their financial data
           </h4>
 
           <div className="mt-10 before:bg-secondary-500 before:absolute before:block before:rounded-lg before:w-1 before:h-full before:-left-1 before:transition-all relative">
@@ -20,7 +20,7 @@ export default function FinancialData() {
               className={`relative flex flex-col cursor-pointer before:content-[''] ${
                 active === 0 &&
                 'before:bg-primary before:absolute before:rounded-lg before:w-1 before:h-full before:-left-1 before:transition-all duration-300 ease-in-out'
-              } pl-7 max-w-[506px]`}
+              } pl-7 max-w-[464px]`}
             >
               <p
                 className={`${
@@ -44,7 +44,7 @@ export default function FinancialData() {
               className={`relative mt-10 cursor-pointer before:content-[''] ${
                 active === 1 &&
                 'before:bg-primary before:absolute before:rounded-lg before:w-1 before:h-full before:-left-1 before:transition-all duration-300 ease-in-out'
-              } pl-7 max-w-[506px]`}
+              } pl-7 max-w-[464px]`}
             >
               <p
                 className={`${
@@ -68,7 +68,7 @@ export default function FinancialData() {
               className={`relative mt-10 cursor-pointer before:content-[''] ${
                 active === 2 &&
                 'before:bg-primary before:absolute before:rounded-lg before:w-1 before:h-full before:-left-1 before:transition-all duration-300 ease-in-out'
-              } pl-7 max-w-[506px]`}
+              } pl-7 max-w-[464px]`}
             >
               <p
                 className={`${
@@ -92,7 +92,7 @@ export default function FinancialData() {
               className={`relative mt-10 cursor-pointer before:content-[''] ${
                 active === 3 &&
                 'before:bg-primary before:absolute before:rounded-lg before:w-1 before:h-full before:-left-1 before:transition-all duration-300 ease-in-out'
-              } pl-7 max-w-[506px]`}
+              } pl-7 max-w-[464px]`}
             >
               <p
                 className={`${
@@ -112,7 +112,16 @@ export default function FinancialData() {
             </div>
           </div>
         </div>
-        <Image alt="" src={codeImg} width={580} height={564} />
+        <Image
+          quality={100}
+          priority
+          objectFit="cover"
+          placeholder="blur"
+          alt=""
+          src={easyConnectScreenshot}
+          width={650}
+          height={469.22}
+        />
       </div>
     </section>
   );

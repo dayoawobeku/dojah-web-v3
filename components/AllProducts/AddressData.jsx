@@ -10,7 +10,7 @@ export default function AddressData({text1, text2, text3}) {
   return (
     <section className="bg-[#ECF3FF] py-20">
       <div className="flex items-center md:justify-between justify-center flex-wrap md:flex-nowrap gap-18 md:gap-6 max-w-[965px] mx-auto px-4">
-        <div className="grid grid-cols-3 gap-[88px]">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-12 md:gap-6 lg:gap-[88px]">
           <div className="relative">
             <div className="absolute -top-[30px] left-10">
               <Image src={captureOnly} alt="" width={56} height={56} />

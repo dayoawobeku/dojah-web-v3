@@ -1,67 +1,5 @@
 import {useState} from 'react';
-import Image from 'next/image';
-import {
-  carouselDots,
-  carouselDots2,
-  carouselDots3,
-  carouselNext,
-  carouselPrev,
-  workflowMobile,
-} from '../../assets/images/images';
 import Hyperlink from '../Hyperlink';
-
-function Carousel({maxcount = 3}) {
-  const [count, setCount] = useState(1);
-
-  const next = () => {
-    if (count < maxcount) {
-      setCount(prev => prev + 1);
-    }
-  };
-
-  const previous = () => {
-    if (count > 1) {
-      setCount(prev => prev - 1);
-    }
-  };
-
-  return (
-    <div className="flex flex-col items-center mx-auto mt-20 sm:hidden">
-      <Image alt="" src={workflowMobile} />
-      <div className="mt-8">
-        <Image
-          alt=""
-          src={
-            count === 1
-              ? carouselDots
-              : count === 2
-              ? carouselDots2
-              : count === 3
-              ? carouselDots3
-              : ''
-          }
-        />
-      </div>
-      <div className="flex items-center gap-6 mt-5">
-        <div onClick={previous}>
-          <Image alt="" src={carouselPrev} />
-        </div>
-        <p className="-mb-1 font-bold text-3md text-secondary">
-          {count === 1
-            ? 'Onboarding'
-            : count === 2
-            ? 'Another'
-            : count === 3
-            ? 'Yet another'
-            : ''}
-        </p>
-        <div onClick={next}>
-          <Image alt="" src={carouselNext} />
-        </div>
-      </div>
-    </div>
-  );
-}
 
 function Tabs({step}) {
   if (step === 1) {
@@ -70,6 +8,7 @@ function Tabs({step}) {
         <video
           width={1178}
           height={578}
+          preload="true"
           loop
           playsInline
           muted
@@ -87,6 +26,7 @@ function Tabs({step}) {
           width={1178}
           height={578}
           loop
+          preload="true"
           playsInline
           muted
           autoPlay
@@ -103,6 +43,7 @@ function Tabs({step}) {
           width={1178}
           height={578}
           loop
+          preload="true"
           playsInline
           muted
           autoPlay
@@ -139,8 +80,6 @@ export default function CustomWorkflow() {
             href="/all-products"
           />
         </div>
-
-        <Carousel />
 
         <div className="items-center hidden gap-1 mt-4 sm:flex">
           <button

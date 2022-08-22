@@ -15,7 +15,7 @@ export default function EmailCheck() {
       </Head>
       <Hero
         illustration={emailCheckIllustration}
-        heading="Verify identity with an email address. Onboard high-quality users."
+        heading="Verify identity and onboard high-quality users with emails."
         paragraph="Filter invalid email addresses and recognize fraud patterns early with instant identity verification via mail."
       />
       <CardsPartners

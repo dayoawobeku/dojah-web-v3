@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import {
   gapIcon,
+  gapIconVertical,
   number1,
   number2,
   number3,
@@ -17,7 +18,7 @@ export default function VerifyDocument() {
           Verify documents in just three steps
         </h3>
 
-        <div className="mt-16 flex items-center justify-between">
+        <div className="mt-16 flex flex-col lg:flex-row items-center justify-between">
           <div className="bg-[url('../assets/images/verify-documents-bg.svg')] bg-center py-7 px-6 flex flex-col items-start gap-4 max-w-[312px]">
             <Image alt="" src={number1} />
             <h4 className="text-3md text-secondary font-bold">Image capture</h4>
@@ -27,7 +28,12 @@ export default function VerifyDocument() {
             </p>
           </div>
 
-          <Image alt="" src={gapIcon} width={74} height={25} />
+          <div className="hidden lg:block">
+            <Image alt="" src={gapIcon} width={74} height={25} />
+          </div>
+          <div className="block lg:hidden">
+            <Image alt="" src={gapIconVertical} width={25} height={74} />
+          </div>
 
           <div className="bg-[url('../assets/images/verify-documents-bg.svg')] bg-center py-7 px-6 flex flex-col items-start gap-4 max-w-[312px]">
             <Image alt="" src={number2} />
@@ -38,7 +44,12 @@ export default function VerifyDocument() {
             </p>
           </div>
 
-          <Image alt="" src={gapIcon} width={74} height={25} />
+          <div className="hidden lg:block">
+            <Image alt="" src={gapIcon} width={74} height={25} />
+          </div>
+          <div className="block lg:hidden">
+            <Image alt="" src={gapIconVertical} width={25} height={74} />
+          </div>
 
           <div className="bg-[url('../assets/images/verify-documents-bg.svg')] bg-center py-7 px-6 flex flex-col items-start gap-4 max-w-[312px]">
             <Image alt="" src={number3} />

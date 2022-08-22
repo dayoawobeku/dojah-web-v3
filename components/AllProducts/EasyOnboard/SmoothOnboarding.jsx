@@ -1,6 +1,10 @@
 import {useState} from 'react';
 import Image from 'next/image';
-import {codeImg} from '../../../assets/images/images';
+import {
+  easyOnboardScreenshot2,
+  easyOnboardScreenshot3,
+  easyOnboardScreenshot4,
+} from '../../../assets/images/images';
 
 export default function SmoothOnboarding({
   heading,
@@ -14,7 +18,7 @@ export default function SmoothOnboarding({
 
   return (
     <section className="py-24 bg-secondary">
-      <div className="flex items-start md:justify-between justify-center flex-wrap md:flex-nowrap gap-16 max-w-[1195px] mx-auto px-4">
+      <div className="flex items-center md:justify-between justify-center flex-wrap lg:flex-nowrap max-w-[1195px] mx-auto px-4">
         <div className="max-w-[553px]">
           {label && (
             <span className="mb-1 text-xs font-medium uppercase text-danger">
@@ -33,7 +37,7 @@ export default function SmoothOnboarding({
               className={`relative flex flex-col cursor-pointer before:content-[''] ${
                 active === 0 &&
                 'before:bg-primary before:absolute before:rounded-lg before:w-1 before:h-full before:-left-1 before:transition-all duration-300 ease-in-out'
-              } pl-7 max-w-[506px]`}
+              } pl-7 max-w-[464px]`}
             >
               <p
                 className={`${
@@ -57,7 +61,7 @@ export default function SmoothOnboarding({
               className={`relative mt-10 cursor-pointer before:content-[''] ${
                 active === 1 &&
                 'before:bg-primary before:absolute before:rounded-lg before:w-1 before:h-full before:-left-1 before:transition-all duration-300 ease-in-out'
-              } pl-7 max-w-[506px]`}
+              } pl-7 max-w-[464px]`}
             >
               <p
                 className={`${
@@ -105,7 +109,7 @@ export default function SmoothOnboarding({
               className={`relative mt-10 cursor-pointer before:content-[''] ${
                 active === 3 &&
                 'before:bg-primary before:absolute before:rounded-lg before:w-1 before:h-full before:-left-1 before:transition-all duration-300 ease-in-out'
-              } pl-7 max-w-[506px]`}
+              } pl-7 max-w-[464px]`}
             >
               <p
                 className={`${
@@ -124,7 +128,24 @@ export default function SmoothOnboarding({
             </div>
           </div>
         </div>
-        <Image alt="" src={codeImg} width={580} height={564} />
+        <Image
+          alt=""
+          quality={100}
+          priority
+          placeholder="blur"
+          objectFit="cover"
+          src={
+            active === 1
+              ? easyOnboardScreenshot2
+              : active === 2
+              ? easyOnboardScreenshot2
+              : active === 3
+              ? easyOnboardScreenshot3
+              : easyOnboardScreenshot4
+          }
+          width={640}
+          height={462}
+        />
       </div>
     </section>
   );

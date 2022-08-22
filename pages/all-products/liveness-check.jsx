@@ -16,7 +16,7 @@ export default function LivenessCheck() {
       </Head>
 
       <Hero
-        heading="Ensure identity documents are presented by their rightful owners."
+        heading="Ensure transactions are performed by live and true users"
         paragraph="Leverage our human-friendly proof of liveness to authorize transactions, sign-ups and logins on your platform."
       />
       <CardsPartners

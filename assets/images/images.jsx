@@ -76,6 +76,7 @@ export {default as number2} from './number-2.svg';
 export {default as number3} from './number-3.svg';
 export {default as verifyDocumentsBg} from './verify-documents-bg.svg';
 export {default as gapIcon} from './gap-ic.svg';
+export {default as gapIconVertical} from './gap-ic-vertical.svg';
 export {default as supportedIds} from './supported-ids.svg';
 export {default as transparency} from './transparency.svg';
 export {default as maliciousAttempts} from './malicious-attempts.svg';
@@ -111,6 +112,7 @@ export {default as idVerificationHero} from './id-verification-widget-hero.svg';
 export {default as financialDataHero} from './financial-data-widget-hero.svg';
 export {default as onboardingConfirmationHero} from './onboarding-and-confirmation-hero.svg';
 export {default as geolocationHero} from './geolocation-hero.svg';
+export {default as financialConnectionHero} from './financial-connection-hero.svg';
 
 // PNGs
 export {default as greenHouseLogo} from './greenhouse-capital-logo.png';
@@ -156,3 +158,14 @@ export {default as homepageWidgetsLg} from './homepage-widgets-lg.png';
 export {default as homepageNocode} from './homepage-nocode.png';
 export {default as homepageNocodeSm} from './homepage-nocode-sm.png';
 export {default as homepageNocodeLg} from './homepage-nocode-lg.png';
+export {default as easyLookupScreenshot1} from './easy-lookup-screenshot-1.png';
+export {default as easyLookupScreenshot2} from './easy-lookup-screenshot-2.png';
+export {default as easyLookupScreenshot3} from './easy-lookup-screenshot-3.png';
+export {default as easyConnectScreenshot} from './easy-connect-screenshot.png';
+export {default as easyOnboardScreenshot2} from './easy-onboard-screenshot-2.png';
+export {default as easyOnboardScreenshot3} from './easy-onboard-screenshot-3.png';
+export {default as easyOnboardScreenshot4} from './easy-onboard-screenshot-4.png';
+
+// JPEGs
+export {default as financialDataWidgetThumbnail} from './financial-data-widget-thumbnail.jpg';
+export {default as idVerificationWidgetThumbnail} from './id-verification-widget-thumbnail.jpg';
